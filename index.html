@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main mdc-theme--background">
+        <!-- left menu -->
+        <div class="left-menu mdc-theme--primary-bg">
+            <button class="mdc-button menu">
+                <span class="material-icons mdc-button__icon">
+                    menu
+                </span>
+            </button>
+            <div class="menu-icon">
+                <button class="mdc-button" onmouseenter="showMenu()">
+                    <span class="material-icons mdc-button__icon">
+                        dashboard
+                    </span>
+                    <span class="mdc-button__label">Home</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        show_chart
+                    </span>
+                    <span class="mdc-button__label">Reports</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        receipt_long
+                    </span>
+                    <span class="mdc-button__label">Transactions</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        account_box
+                    </span>
+                    <span class="mdc-button__label">Customers</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        location_on
+                    </span>
+                    <span class="mdc-button__label">Sites</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        style
+                    </span>
+                    <span class="mdc-button__label">Cards</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        local_shipping
+                    </span>
+                    <span class="mdc-button__label">Vehicles</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        airline_seat_recline_normal
+                    </span>
+                    <span class="mdc-button__label">Drivers</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        folder
+                    </span>
+                    <span class="mdc-button__label">Groups</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        apps
+                    </span>
+                    <span class="mdc-button__label">More...</span>
+                </button>
+            </div>
+            <div class="divider"></div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        history
+                    </span>
+                    <span class="mdc-button__label">Recent</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        flash_on
+                    </span>
+                    <span class="mdc-button__label">Most used</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        star_border
+                    </span>
+                    <span class="mdc-button__label">Starred</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- main page -->
+        <div class="main-page">
+
+            <!-- header -->
+            <div class="header mdc-theme--surface">
+                <img src="assets/mcs-core-logo.png" alt="mcs core logo">
+                <div class="header-info">
+                    <div class="header-search">
+                        <input type="text" class="search-input" placeholder="Search">
+                        <div class="select-box">
+                            <span class="name">Everything</span>
+                            <span class="material-icons">
+                                arrow_drop_down
+                            </span>
+                        </div>
+                        <button class="mdc-fab" aria-label="Search">
+                            <div class="mdc-fab__ripple"></div>
+                            <span class="mdc-fab__icon material-icons">search</span>
+                        </button>
+                    </div>
+                    <div class="header-account">
+                        <div class="header-account-icon">
+                            <span class="material-icons account-icon">
+                                apartment
+                            </span>
+                            <span class="name">PetroCore Australia</span>
+                            <span class="material-icons">
+                                arrow_drop_down
+                            </span>
+                        </div>
+                        <div class="header-account-icon">
+                            <span class="material-icons account-icon">
+                                account_circle
+                            </span>
+                            <span class="name">Arron Young</span>
+                            <span class="material-icons">
+                                arrow_drop_down
+                            </span>
+                        </div>
+                        <div class="notification-icon-wrapper">
+                            <span class="material-icons">
+                                notifications
+                            </span>
+                            <span class="count">9</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-page-container">
+
+                <!-- menu sidebar -->
+                <div class="menu-sidebar mdc-theme--primary mdc-theme--surface" id="menu-sidebar">
+                   <div class="sub-menu-container">
+                    <span class="title">Sites</span>
+                    <button class="mdc-button">
+                        <span class="material-icons mdc-button__icon">
+                            location_on
+                        </span>
+                        <span class="mdc-button__label">All Sites</span>
+                    </button>
+                    <button class="mdc-button">
+                        <span class="material-icons mdc-button__icon">
+                            <span class="material-icons">
+                                bookmark
+                            </span>
+                        </span>
+                        <span class="mdc-button__label">Add Dip Read</span>
+                    </button>
+                    <button class="mdc-button">
+                        <span class="material-icons mdc-button__icon">
+                            <span class="material-icons">
+                                bookmark
+                            </span>
+                        </span>
+                        <span class="mdc-button__label">Deliveries</span>
+                    </button>
+                    <button class="mdc-button">
+                        <span class="material-icons mdc-button__icon">
+                            <span class="material-icons">
+                                bookmark
+                            </span>
+                        </span>
+                        <span class="mdc-button__label">Dip Readings</span>
+                    </button>
+                    <button class="mdc-button">
+                        <span class="material-icons mdc-button__icon">
+                            <span class="material-icons">
+                                bookmark
+                            </span>
+                        </span>
+                        <span class="mdc-button__label">Transactions</span>
+                    </button>
+                    <button class="mdc-button">
+                        <span class="material-icons mdc-button__icon">
+                            <span class="material-icons">
+                                bookmark
+                            </span>
+                        </span>
+                        <span class="mdc-button__label">Terminals</span>
+                    </button>
+                    <button class="mdc-button">
+                        <span class="material-icons mdc-button__icon">
+                            <span class="material-icons">
+                                bookmark
+                            </span>
+                        </span>
+                        <span class="mdc-button__label">Reconcilliations</span>
+                    </button>
+                   </div>
+                </div>
+
+                <div class="main-page-wrapper" id="main-wrapper">
+
+                    <!-- main content -->
+                    <div class="main-content">
+
+                        <!-- header -->
+                        <div class="main-content-header">
+                            <p class="font-montserrat">Aalborg Depot 993800</p>
+                            <div class="btn-actions header-actions hide">
+                                <button class="mdc-button mdc-button--outlined">
+                                    <span class="mdc-button__ripple"></span>
+                                    <span class="mdc-button__label">Export Site info to PDF</span>
+                                </button>
+                                <button class="mdc-button mdc-button--outlined">
+                                    <span class="mdc-button__ripple"></span>
+                                    <span class="mdc-button__label">Send to User</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- content -->
+
+                        <div class="content mdc-theme--surface">
+                            <!-- tabs -->
+                            <div class="mdc-tab-bar" role="tablist">
+                                <div class="mdc-tab-scroller">
+                                    <div class="mdc-tab-scroller__scroll-area">
+                                        <div class="mdc-tab-scroller__scroll-content">
+                                            <button class="mdc-tab tab-active" role="tab" aria-selected="true" autofocus
+                                                tabindex="0">
+                                                <span class="mdc-tab__content">
+                                                    <span class="mdc-tab__text-label mdc-theme--primary">Site Overview</span>
+                                                </span>
+                                                <span class="mdc-tab-indicator">
+                                                    <span
+                                                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                </span>
+                                                <span class="mdc-tab__ripple"></span>
+                                            </button>
+                                            <button class="mdc-tab" role="tab" aria-selected="false" tabindex="1">
+                                                <span class="mdc-tab__content">
+                                                    <span class="mdc-tab__text-label mdc-theme--primary">Tanks</span>
+                                                </span>
+                                                <span class="mdc-tab-indicator">
+                                                    <span
+                                                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                </span>
+                                                <span class="mdc-tab__ripple"></span>
+                                            </button>
+                                            <button class="mdc-tab" role="tab" aria-selected="false" tabindex="2">
+                                                <span class="mdc-tab__content">
+                                                    <span class="mdc-tab__text-label mdc-theme--primary">Deliveries</span>
+                                                </span>
+                                                <span class="mdc-tab-indicator">
+                                                    <span
+                                                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                </span>
+                                                <span class="mdc-tab__ripple"></span>
+                                            </button>
+                                            <button class="mdc-tab" role="tab" aria-selected="false" tabindex="3">
+                                                <span class="mdc-tab__content">
+                                                    <span class="mdc-tab__text-label mdc-theme--primary">Dip Readings</span>
+                                                </span>
+                                                <span class="mdc-tab-indicator">
+                                                    <span
+                                                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                </span>
+                                                <span class="mdc-tab__ripple"></span>
+                                            </button>
+                                            <button class="mdc-tab" role="tab" aria-selected="false" tabindex="4">
+                                                <span class="mdc-tab__content">
+                                                    <span class="mdc-tab__text-label mdc-theme--primary">Transactions</span>
+                                                </span>
+                                                <span class="mdc-tab-indicator">
+                                                    <span
+                                                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                </span>
+                                                <span class="mdc-tab__ripple"></span>
+                                            </button>
+                                            <button class="mdc-tab" role="tab" aria-selected="false" tabindex="5">
+                                                <span class="mdc-tab__content">
+                                                    <span class="mdc-tab__text-label mdc-theme--primary">Terminals</span>
+                                                </span>
+                                                <span class="mdc-tab-indicator">
+                                                    <span
+                                                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                </span>
+                                                <span class="mdc-tab__ripple"></span>
+                                            </button>
+                                            <button class="mdc-tab" role="tab" aria-selected="false" tabindex="6">
+                                                <span class="mdc-tab__content">
+                                                    <span class="mdc-tab__text-label mdc-theme--primary">Reconciliations</span>
+                                                </span>
+                                                <span class="mdc-tab-indicator">
+                                                    <span
+                                                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                </span>
+                                                <span class="mdc-tab__ripple"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- site overview -->
+                            <div class="overview-wrapper container block">
+                                <!-- details and status -->
+                                <div class="overview-details">
+                                    <div class="mdc-card mdc-card--outlined">
+                                        <div class="overview-header">
+                                            <p class="title font-montserrat">Site details</p>
+                                            <button class="mdc-button mdc-button--icon-leading">
+                                                <span class="mdc-button__ripple"></span>
+                                                <i class="material-icons mdc-button__icon" aria-hidden="true">edit</i>
+                                                <span class="mdc-button__label">Edit</span>
+                                            </button>
+                                        </div>
+                                        <div class="overview-row">
+                                            <p class="text">Site number</p>
+                                            <p class="text-bold">001</p>
+                                        </div>
+                                        <div class="overview-row">
+                                            <p class="text">Site name</p>
+                                            <p class="text-bold">Aalborg Depot 993800</p>
+                                        </div>
+                                        <div class="overview-row text">
+                                            <p>Site type</p>
+                                            <p>Home Depot</p>
+                                        </div>
+                                        <div class="overview-row text">
+                                            <p>Address 1</p>
+                                            <p>CBT Ltd</p>
+                                        </div>
+                                        <div class="overview-row text">
+                                            <p>Address 2</p>
+                                            <p>Scorrier</p>
+                                        </div>
+                                        <div class="overview-row text">
+                                            <p>Zip / Post Code</p>
+                                            <p>QLD 4008</p>
+                                        </div>
+                                        <div class="overview-row"></div>
+                                    </div>
+                                    <div class="mdc-card mdc-card--outlined">
+                                        <div class="overview-header">
+                                            <p class="title font-montserrat">Status</p>
+                                        </div>
+                                        <div class="status-row">
+                                            <span class="material-icons mdc-theme--error">
+                                                warning
+                                            </span>
+                                            <p class="text">[Database] Terminal 1: Offline (Last activity 05/08/2013
+                                                23:04:23)</p>
+                                        </div>
+                                        <div class="status-row">
+                                            <span class="material-icons error-icon">
+                                                error
+                                            </span>
+                                            <p class="text">[Database] Tank 2: Dip reading volume below normal level (0
+                                                litres)</p>
+                                        </div>
+                                        <div class="status-row">
+                                            <span class="material-icons check-icon">
+                                                check_circle
+                                            </span>
+                                            <p class="text">[SCCardApp] SCCardApp SW version: 3.7.8.12</p>
+                                        </div>
+                                        <div class="status-row">
+                                            <span class="material-icons check-icon">
+                                                check_circle
+                                            </span>
+                                            <p class="text">[Database] Tank 1: Dip reading volume OK (67891.11 litres
+                                                remaining)</p>
+                                        </div>
+                                        <div class="status-row">
+                                            <span class="material-icons check-icon">
+                                                check_circle
+                                            </span>
+                                            <p class="text">[Database] Tank 3: Dip reading volume OK (0 litres
+                                                remaining)</p>
+                                        </div>
+                                        <div class="status-row">
+                                            <span class="material-icons check-icon">
+                                                check_circle
+                                            </span>
+                                            <p class="text">[Database] Tank 4: Dip reading volume OK (0 litres
+                                                remaining)</p>
+                                        </div>
+                                        <div class="overview-row"></div>
+                                    </div>
+                                </div>
+
+                                <!-- tanks -->
+                                <div class="mdc-card mdc-card--outlined overview-tanks">
+                                    <p class="title font-montserrat">Tanks preview</p>
+                                    <div class="overview-tanks-preview">
+                                        <div class="tanks-card">
+                                            <img src="assets/overview/tank-container.png" alt="tank container">
+                                            <div>
+                                                <p class="text-bold mdc-theme--primary">Tank 1 (Diesel)</p>
+                                                <p class="text-bold">Diesel</p>
+                                                <div class="tanks-card-status">
+                                                    <span class="material-icons check-icon">
+                                                        check_circle
+                                                    </span>
+                                                    <p class="text">Epsum epicanthus</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tanks-card">
+                                            <img src="assets/overview/tank-container.png" alt="tank container">
+                                            <div>
+                                                <p class="text-bold mdc-theme--primary">Tank 2 (Gasoil)</p>
+                                                <p class="text-bold">Gasoil</p>
+                                                <div class="tanks-card-status">
+                                                    <span class="material-icons check-icon">
+                                                        check_circle
+                                                    </span>
+                                                    <p class="text">Dip reading OK</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tanks-card">
+                                            <img src="assets/overview/tank-container.png" alt="tank container">
+                                            <div>
+                                                <p class="text-bold mdc-theme--primary">Tank 3 (AdBlue)</p>
+                                                <p class="text-bold">AdBlue</p>
+                                                <div class="tanks-card-status">
+                                                    <span class="material-icons error-icon">
+                                                        error
+                                                    </span>
+                                                    <p class="text">Below normal level</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tanks-card">
+                                            <img src="assets/overview/tank-container.png" alt="tank container">
+                                            <div>
+                                                <p class="text-bold mdc-theme--primary">Tank 4 (Diesel)</p>
+                                                <p class="text-bold">Diesel</p>
+                                                <div class="tanks-card-status">
+                                                    <span class="material-icons mdc-theme--error">
+                                                        warning
+                                                    </span>
+                                                    <p class="text">Epsum epicanthus</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tanks-card">
+                                            <img src="assets/overview/tank-container.png" alt="tank container">
+                                            <div>
+                                                <p class="text-bold mdc-theme--primary">Tank 5 (Gasoil)</p>
+                                                <p class="text-bold">Gasoil</p>
+                                                <div class="tanks-card-status">
+                                                    <span class="material-icons check-icon">
+                                                        check_circle
+                                                    </span>
+                                                    <p class="text">Dip reading OK</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tanks-card">
+                                            <img src="assets/overview/tank-container.png" alt="tank container">
+                                            <div>
+                                                <p class="text-bold mdc-theme--primary">Tank 7 (Gasoil)</p>
+                                                <p class="text-bold">Gasoil</p>
+                                                <div class="tanks-card-status">
+                                                    <span class="material-icons check-icon">
+                                                        check_circle
+                                                    </span>
+                                                    <p class="text">Dip reading OK</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- images -->
+                                <div class="mdc-card mdc-card--outlined overview-images">
+                                    <div class="overview-img-header">
+                                        <p class="title font-montserrat">Images</p>
+                                        <div class="btn-actions">
+                                            <button class="mdc-button mdc-button--outlined">
+                                                <span class="mdc-button__ripple"></span>
+                                                <span class="mdc-button__label">Add image</span>
+                                            </button>
+                                            <button class="mdc-button mdc-button--outlined">
+                                                <span class="mdc-button__ripple"></span>
+                                                <span class="mdc-button__label">Manage images</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="overview-img-wrapper">
+                                        <img src="assets/overview/overview-img1.png" alt="overview image">
+                                        <img src="assets/overview/overview-img2.png" alt="overview image">
+                                        <img src="assets/overview/overview-img3.png" alt="overview image">
+                                    </div>
+                                </div>
+
+                                <!-- map -->
+                                <div class="mdc-card mdc-card--outlined overview-images overview-map">
+                                    <div class="overview-img-header">
+                                        <p class="title font-montserrat">Map</p>
+                                        <button class="mdc-button mdc-button--outlined">
+                                            <span class="mdc-button__ripple"></span>
+                                            <span class="mdc-button__label">Copy Map URL</span>
+                                        </button>
+                                    </div>
+                                    <div id="map"></div>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2734.9696472127184!2d-3.1773736301430864!3d51.561896370570764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e1f92575970b1%3A0xe5e9b7c69f6cef29!2sNant%20y%20Cwm%20Farm%20Entrance!5e1!3m2!1sen!2sam!4v1694759386622!5m2!1sen!2sam"
+                                         width="100%"
+                                          height="469" 
+                                           style="border:0;" 
+                                           allowfullscreen="" 
+                                           loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade">
+                                        </iframe>
+                                </div>
+                            </div>
+
+                            <!-- tanks ->>>> todo -->
+                            <div class="container"></div>
+
+                            <!-- deliveries -->
+                            <div class="container">
+                                <div class="deliveries-header">
+                                    <div class="date-wrapper">
+                                        <span class="mdc-theme--surface">Start Date</span>
+                                        <input type="date">
+                                    </div>
+                                    <div class="date-wrapper">
+                                        <span class="mdc-theme--surface">End Date</span>
+                                        <input type="date">
+                                    </div>
+                                    <div class="additional-filters">
+                                        Additional Filters: Product & Tank
+                                    </div>
+                                    <button class="mdc-button mdc-button--raised">
+                                        <span class="mdc-button__label">Export Data</span>
+                                    </button>
+                                    <button class="mdc-button mdc-button--raised">
+                                        <span class="mdc-button__label">Add Delivery</span>
+                                    </button>
+                                </div>
+                                <div class="overflow-auto">
+                                    <table class="deliveries-table" id="deliveries-table">
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- dip readings -->
+                            <div class="container">
+                                <div class="deliveries-header">
+                                    <div class="date-wrapper">
+                                        <span class="mdc-theme--surface">Start Date</span>
+                                        <input type="date">
+                                    </div>
+                                    <div class="date-wrapper">
+                                        <span class="mdc-theme--surface">End Date</span>
+                                        <input type="date">
+                                    </div>
+                                    <div class="additional-filters">
+                                        Additional Filters: Product & Tank
+                                    </div>
+                                    <button class="mdc-button mdc-button--raised">
+                                        <span class="mdc-button__label">Edit Dip Read Schedule</span>
+                                    </button>
+                                    <button class="mdc-button mdc-button--raised">
+                                        <span class="mdc-button__label">Add Dip Reading</span>
+                                    </button>
+                                </div>
+                                <div class="overflow-auto">
+                                    <table class="deliveries-table" id="regardings-table">
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- footer -->
+                    <div class="footer">
+                        <span>© MCS Systems Lorum Epsum 2023</span>
+                        <a class="mdc-button">
+                            Privacy Policy
+                        </a>
+                        <a class="mdc-button">
+                            Data Protection
+                        </a>
+                        <a class="mdc-button">
+                            Feedback
+                        </a>
+                        <a class="mdc-button">
+                            Support
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+</body>
+
+</html>
