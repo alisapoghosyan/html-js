@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../sites/sites.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main mdc-theme--background">
+        <!-- left menu -->
+        <div class="left-menu mdc-theme--primary-bg">
+            <button class="mdc-button menu">
+                <span class="material-icons mdc-button__icon">
+                    menu
+                </span>
+            </button>
+            <div class="menu-icon">
+                <a class="mdc-button" onmouseenter="showMenu()" href="/">
+                    <span class="material-icons mdc-button__icon">
+                        dashboard
+                    </span>
+                    <span class="mdc-button__label">Home</span>
+                </a>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        show_chart
+                    </span>
+                    <span class="mdc-button__label">Reports</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        receipt_long
+                    </span>
+                    <span class="mdc-button__label">Transactions</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        account_box
+                    </span>
+                    <span class="mdc-button__label">Customers</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <a class="mdc-button" href="/sites">
+                    <span class="material-icons mdc-button__icon">
+                        location_on
+                    </span>
+                    <span class="mdc-button__label">Sites</span>
+                </a>
+            </div>
+            <div class="menu-icon">
+                <a class="mdc-button" href="/cards">
+                    <span class="material-icons mdc-button__icon">
+                        style
+                    </span>
+                    <span class="mdc-button__label">Cards</span>
+                </a>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        local_shipping
+                    </span>
+                    <span class="mdc-button__label">Vehicles</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        airline_seat_recline_normal
+                    </span>
+                    <span class="mdc-button__label">Drivers</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <a class="mdc-button" href="/groups">
+                    <span class="material-icons mdc-button__icon">
+                        folder
+                    </span>
+                    <span class="mdc-button__label">Groups</span>
+                </a>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        apps
+                    </span>
+                    <span class="mdc-button__label">More...</span>
+                </button>
+            </div>
+            <div class="divider"></div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        history
+                    </span>
+                    <span class="mdc-button__label">Recent</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        flash_on
+                    </span>
+                    <span class="mdc-button__label">Most used</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        star_border
+                    </span>
+                    <span class="mdc-button__label">Starred</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- main page -->
+        <div class="main-page">
+
+            <!-- header -->
+            <div class="header mdc-theme--surface">
+                <img src="../assets/mcs-core-logo.png" alt="mcs core logo">
+                <div class="header-info">
+                    <div class="header-search">
+                        <input type="text" class="search-input" placeholder="Search">
+                        <div class="select-box">
+                            <span class="name">Everything</span>
+                            <span class="material-icons">
+                                arrow_drop_down
+                            </span>
+                        </div>
+                        <button class="mdc-fab" aria-label="Search">
+                            <div class="mdc-fab__ripple"></div>
+                            <span class="mdc-fab__icon material-icons">search</span>
+                        </button>
+                    </div>
+                    <div class="header-account">
+                        <div class="header-account-icon">
+                            <span class="material-icons account-icon">
+                                apartment
+                            </span>
+                            <span class="name">PetroCore Australia</span>
+                            <span class="material-icons">
+                                arrow_drop_down
+                            </span>
+                        </div>
+                        <div class="header-account-icon">
+                            <span class="material-icons account-icon">
+                                account_circle
+                            </span>
+                            <span class="name">Arron Young</span>
+                            <span class="material-icons">
+                                arrow_drop_down
+                            </span>
+                        </div>
+                        <div class="notification-icon-wrapper">
+                            <span class="material-icons">
+                                notifications
+                            </span>
+                            <span class="count">9</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-page-container">
+
+                <!-- menu sidebar -->
+                <div class="menu-sidebar mdc-theme--primary mdc-theme--surface" id="menu-sidebar">
+                    <div class="sub-menu-container">
+                        <span class="title">Sites</span>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                location_on
+                            </span>
+                            <span class="mdc-button__label">All Sites</span>
+                        </button>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                <span class="material-icons">
+                                    bookmark
+                                </span>
+                            </span>
+                            <span class="mdc-button__label">Add Dip Read</span>
+                        </button>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                <span class="material-icons">
+                                    bookmark
+                                </span>
+                            </span>
+                            <span class="mdc-button__label">Deliveries</span>
+                        </button>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                <span class="material-icons">
+                                    bookmark
+                                </span>
+                            </span>
+                            <span class="mdc-button__label">Dip Readings</span>
+                        </button>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                <span class="material-icons">
+                                    bookmark
+                                </span>
+                            </span>
+                            <span class="mdc-button__label">Transactions</span>
+                        </button>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                <span class="material-icons">
+                                    bookmark
+                                </span>
+                            </span>
+                            <span class="mdc-button__label">Terminals</span>
+                        </button>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                <span class="material-icons">
+                                    bookmark
+                                </span>
+                            </span>
+                            <span class="mdc-button__label">Reconcilliations</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="main-page-wrapper" id="main-wrapper">
+                    <div class="main-content card-conatiner">
+                        <div class="content mdc-theme--surface ">
+                            <div class="refresh-section">
+                                <button class="mdc-button mdc-button--raised" >
+                                    <span class="mdc-button__label">
+                                        <span class="material-icons refresh">
+                                            refresh
+                                        </span>
+                                        Refresh
+                                    </span>
+                                </button> 
+                                <div class="dot-sectio">
+                                    <span class="material-icons brightness_1">
+                                        brightness_1
+                                    </span>
+                                    Widgets are automatically updated every 2 minutes. To refresh now, click button to the left
+                                </div>
+                            </div>
+                            <div class="city-chart-section">
+                                <div class="left-side card">
+                                    <p class="blue-label">Manchester</p>
+                                    <div class="chart-sectio">
+                                        <div class="barrel-box">
+                                            <div class="name">Tank 1 – Diesel</div>
+                                            <div class="barrel">
+                                                <div class="liter"></div>
+                                                <div class="overfill"></div>
+                                                <div class="reorder-level"></div>
+                                                <div class="low-level"></div>
+                                            </div>
+                                            <div class="table">
+                                                <div class="left"></div>
+                                                <div class="right"></div>
+                                            </div>
+                                        </div>
+                                        <div class="estimated-volume">
+                                            <div class="number">1</div>
+                                            <div class="number">2</div>
+                                            <div class="number">0</div>
+                                            <div class="number">0</div>
+                                            <div class="number">0</div>
+                                        </div>
+                                    </div>
+                                    <div class="data-section">
+                                        <div class="row">
+                                            <p class="type">Capacity</p>
+                                            <p class="value">15.000</p>
+                                        </div>
+                                        <div class="row">
+                                            <p class="type">Ullage</p>
+                                            <p class="value">3.000</p>
+                                        </div>
+                                        <div class="row">
+                                            <p class="type">Remaining volume (days)</p>
+                                            <div class="icon-sectio">
+                                                <p class="value">2.5</p>
+                                                <span class="material-icons info">
+                                                    info
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p class="type">Last DIP timestamp</p>
+                                            <div class="icon-sectio">
+                                                <p class="value">2023 Sep 12</p>
+                                                <span class="material-icons warning">
+                                                    warning
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p class="type">Last DIP reading</p>
+                                            <p class="value">12.000</p>
+                                        </div>                                                                                                                                                                
+                                    </div>                                   
+                                </div>
+                                <div class="right-side">
+                                    <div class="card alerts">
+                                        <p class="label">Misc. Tanks Alerts 7 Days</p>
+                                        <div class="tanks-alerts">
+                                            <div>
+                                                <span class="blue-text">Manchester</span>
+                                                <span class="grey-text">- Tank 2 (Diesel)</span>
+                                            </div>
+                                            <div>
+                                                <span class="grey-text date">2023 Sep 13 12:42</span>
+                                                <span class="grey-text">Overfill</span>
+                                            </div>
+                                            <span class="material-icons warning">
+                                                warning
+                                            </span>
+                                        </div>
+                                        <div class="tanks-alerts">
+                                            <div>
+                                                <span class="blue-text">Manchester</span>
+                                                <span class="grey-text">- Tank 2 (Diesel)</span>
+                                            </div>
+                                            <div>
+                                                <span class="grey-text date">2023 Sep 10 02:12</span>
+                                                <span class="grey-text">Overfill</span>
+                                            </div>
+                                            <span class="material-icons warning">
+                                                warning
+                                            </span>
+                                        </div>                                        
+                                    </div>
+                                    <div class="card discrepancy">
+                                        <p class="label">Stock Discrepancy 7 days</p>
+                                        <div class="row">
+                                            <div>
+                                                <span class="blue-text">Manchester</span>
+                                                <span class="grey-text">- Tank 2 (Diesel)</span>
+                                            </div>
+                                            <div>
+                                                <span class="grey-text">Average</span>
+                                            </div>
+                                            <div >
+                                                <div class="trending trending-down">
+                                                    <span class="material-icons trending_down">
+                                                        trending_down
+                                                    </span>
+                                                    0.1%
+                                                    <span class="material-icons check-icon circle-icon">
+                                                        check_circle
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="divider"></div>
+                                        <div class="row">
+                                            <div>
+                                                <span class="blue-text">Manchester</span>
+                                                <span class="grey-text">- Tank 2 (Diesel)</span>
+                                            </div>
+                                            <div>
+                                                <span class="grey-text">2023 Sep 13</span>
+                                            </div>
+                                            <div >
+                                                <div class="trending trending-up">
+                                                    <span class="material-icons trending_up">
+                                                        trending_up
+                                                    </span>
+                                                    1.2%
+                                                    <span class="material-icons info circle-icon info-circle-icon">
+                                                        info
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="row">
+                                            <div>
+                                                <span class="blue-text">Manchester</span>
+                                                <span class="grey-text">- Tank 2 (Diesel)</span>
+                                            </div>
+                                            <div>
+                                                <span class="grey-text">2023 Sep 13</span>
+                                            </div>
+                                            <div >
+                                                <div class="trending trending-down">
+                                                    <span class="material-icons trending_down">
+                                                        trending_down
+                                                    </span>
+                                                    4.7%
+                                                    <span class="material-icons warning circle-icon warning">
+                                                        warning
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="row">
+                                            <div>
+                                                <span class="blue-text">Manchester</span>
+                                                <span class="grey-text">- Tank 2 (Diesel)</span>
+                                            </div>
+                                            <div>
+                                                <span class="grey-text">2023 Sep 13</span>
+                                            </div>
+                                            <div >
+                                                <div class="trending trending-up">
+                                                    <span class="material-icons trending_up">
+                                                        trending_up
+                                                    </span>
+                                                    1.2%
+                                                    <span class="material-icons info circle-icon info-circle-icon">
+                                                        info
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>   
+                                        <div class="row">
+                                            <div>
+                                                <span class="blue-text">Manchester</span>
+                                                <span class="grey-text">- Tank 2 (Diesel)</span>
+                                            </div>
+                                            <div>
+                                                <span class="grey-text">2023 Sep 10</span>
+                                            </div>
+                                            <div >
+                                                <div class="trending trending-up">
+                                                    <span class="material-icons trending_up">
+                                                        trending_up
+                                                    </span>
+                                                    0.7%
+                                                    <span class="material-icons check-icon circle-icon">
+                                                        check_circle
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>   
+                                        <div class="row">
+                                            <div>
+                                                <span class="blue-text">Manchester</span>
+                                                <span class="grey-text">- Tank 2 (Diesel)</span>
+                                            </div>
+                                            <div>
+                                                <span class="grey-text">2023 Sep 9</span>
+                                            </div>
+                                            <div >
+                                                <div class="trending trending-down">
+                                                    <span class="material-icons trending_down">
+                                                        trending_down
+                                                    </span>
+                                                    2.1%
+                                                    <span class="material-icons info circle-icon info-circle-icon">
+                                                        info
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>   
+                                        <div class="row">
+                                            <div>
+                                                <span class="blue-text">Manchester</span>
+                                                <span class="grey-text">- Tank 2 (Diesel)</span>
+                                            </div>
+                                            <div>
+                                                <span class="grey-text">2023 Sep 8</span>
+                                            </div>
+                                            <div >
+                                                <div class="trending trending-down">
+                                                    <span class="material-icons trending_down">
+                                                        trending_down
+                                                    </span>
+                                                    3.1%
+                                                    <span class="material-icons warning circle-icon warning">
+                                                        warning
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div>
+                            <div class="level-charts">
+                                <div class="card">
+                                    <div class="label">Historic level</div>
+                                    <canvas id="chartId" aria-label="chart" heigth="350" width="580"></canvas>
+                                </div>
+                                <div class="card">
+                                    <div class="label">Predicted level</div>
+                                    <canvas id="chartId2" aria-label="chart" heigth="350" width="580"></canvas>
+                                </div>                                 
+                            </div>
+
+
+
+                            <!-- TWO TANK -->
+
+                            <!-- <div class="d-flex gap-5" style="margin-top: 40px;">
+                                <div class="left-side card">
+                                    <p class="blue-label">Manchester</p>
+                                    <div class="chart-sectio">
+                                        <div class="barrel-box">
+                                            <div class="name">Tank 1 – Diesel</div>
+                                            <div class="barrel">
+                                                <div class="liter"></div>
+                                                <div class="overfill"></div>
+                                                <div class="reorder-level"></div>
+                                                <div class="low-level"></div>
+                                            </div>
+                                            <div class="table">
+                                                <div class="left"></div>
+                                                <div class="right"></div>
+                                            </div>
+                                        </div>
+                                        <div class="estimated-volume">
+                                            <div class="number">7</div>
+                                            <div class="number">0</div>
+                                            <div class="number">0</div>
+                                        </div>
+                                    </div>
+                                    <div class="data-section">
+                                        <div class="row">
+                                            <p class="type">Capacity</p>
+                                            <p class="value">15.000</p>
+                                        </div>
+                                        <div class="row">
+                                            <p class="type">Ullage</p>
+                                            <p class="value">3.000</p>
+                                        </div>
+                                        <div class="row">
+                                            <p class="type">Remaining volume (days)</p>
+                                            <p class="value">2.5</p>
+                                        </div>
+                                        <div class="row">
+                                            <p class="type">Last DIP timestamp</p>
+                                            <div class="icon-sectio">
+                                                <p class="value">2023 Sep 12</p>
+                                                <span class="material-icons info">
+                                                    info
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p class="type">Last DIP reading</p>
+                                            <div class="icon-sectio">
+                                                <p class="value">12.000</p>
+                                                <span class="material-icons warning">
+                                                    warning
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>                                   
+                                </div>                              
+                                <div class="left-side card">
+                                    <p class="blue-label">London</p>
+                                    <div class="chart-sectio">
+                                        <div class="barrel-box">
+                                            <div class="name">Tank 1 – Diesel</div>
+                                            <div class="barrel">
+                                                <div class="liter"></div>
+                                                <div class="overfill"></div>
+                                                <div class="reorder-level"></div>
+                                                <div class="low-level"></div>
+                                            </div>
+                                            <div class="table">
+                                                <div class="left"></div>
+                                                <div class="right"></div>
+                                            </div>
+                                        </div>
+                                        <div class="estimated-volume">
+                                            <div class="number">7</div>
+                                            <div class="number">0</div>
+                                            <div class="number">0</div>
+                                        </div>
+                                    </div>
+                                    <div class="data-section">
+                                        <div class="row">
+                                            <p class="type">Capacity</p>
+                                            <p class="value">15.000</p>
+                                        </div>
+                                        <div class="row">
+                                            <p class="type">Ullage</p>
+                                            <p class="value">3.000</p>
+                                        </div>
+                                        <div class="row">
+                                            <p class="type">Remaining volume (days)</p>
+                                            <p class="value">2.5</p>
+                                        </div>
+                                        <div class="row">
+                                            <p class="type">Last DIP timestamp</p>
+                                            <div class="icon-sectio">
+                                                <p class="value">2023 Sep 12</p>
+                                                <span class="material-icons info">
+                                                    info
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p class="type">Last DIP reading</p>
+                                            <div class="icon-sectio">
+                                                <p class="value">12.000</p>
+                                                <span class="material-icons warning">
+                                                    warning
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <div class="card alerts">
+                                        <p class="label">Misc. Tanks Alerts 24H</p>
+                                        <div class="tanks-alerts mr-0">
+                                            <div>
+                                                <span class="blue-text">Manchester</span>
+                                                <span class="grey-text">- Tank 2 (Diesel)</span>
+                                            </div>
+                                            <div>
+                                                <span class="grey-text">Overfill</span>
+                                            </div>
+                                            <span class="material-icons warning">
+                                                warning
+                                            </span>
+                                        </div>
+                                        <div class="tanks-alerts mr-0">
+                                            <div>
+                                                <span class="blue-text">London</span>
+                                                <span class="grey-text">- Tank 1 (Diesel)</span>
+                                            </div>
+                                            <div>
+                                                <span class="grey-text">Overfill</span>
+                                            </div>
+                                            <span class="material-icons warning">
+                                                warning
+                                            </span>
+                                        </div>                                        
+                                    </div>
+                                    <div class="card discrepancy two-tanks">
+                                        <p class="label">Stock Discrepancy 24H</p> 
+                                        <div class="row">
+                                            <div>
+                                                <span class="blue-text">Manchester</span>
+                                                <span class="grey-text">- Tank 2 (Diesel)</span>
+                                            </div>
+                                            <div >
+                                                <div class="trending trending-up">
+                                                    <span class="material-icons trending_up">
+                                                        trending_up
+                                                    </span>
+                                                    4.7%
+                                                    <span class="material-icons warning circle-icon warning">
+                                                        warning
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div>
+                                                <span class="blue-text">London</span>
+                                                <span class="grey-text">- Tank 2 (Diesel)</span>
+                                            </div>
+                                            <div >
+                                                <div class="trending trending-down">
+                                                    <span class="material-icons trending_down">
+                                                        trending_down
+                                                    </span>
+                                                    0.2%
+                                                    <span class="material-icons warning circle-icon warning">
+                                                        warning
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                </div>                                 
+
+                            </div> -->
+
+
+
+                            <!-- TANKS > 2 -->
+                            
+                            <!-- <div class="refresh-section">
+                                <button class="mdc-button mdc-button--raised" >
+                                    <span class="mdc-button__label">
+                                        <span class="material-icons refresh">
+                                            refresh
+                                        </span>
+                                        Refresh
+                                    </span>
+                                </button> 
+                                <div>
+                                    <div class="dot-sectio mb-2">
+                                        <span class="material-icons brightness_1">
+                                            brightness_1
+                                        </span>
+                                        Widgets are automatically updated every two minutes. To refresh now, click button to the left
+                                    </div>
+                                    <div class="dot-sectio">
+                                        <span class="material-icons brightness_1">
+                                            brightness_1
+                                        </span>
+                                        Sites that are offline are shown with grey background in Widgets
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-cards">
+                                <div class="d-flex gap-5 mb-5">
+                                    <div class="card w-full">
+                                        <p class="label">Tanks at Alert Level</p>
+                                        <div class="d-flex gap-3">
+                                            <div class="w-50">
+                                                <div class="dashboard-cards-row">
+                                                    <span class="blue-text">Manchester</span>
+                                                    <span class="grey-text">- Tank 2 (Diesel)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row">
+                                                    <span class="blue-text">London</span>
+                                                    <span class="grey-text">- Tank 1 (AdBlue)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row">
+                                                    <span class="blue-text">Gatwick</span>
+                                                    <span class="grey-text">- Tank 2 (Diesel)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row">
+                                                    <span class="blue-text">Bolton</span>
+                                                    <span class="grey-text">- Tank 2 (HVO)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row">
+                                                    <span class="blue-text">Neverland</span>
+                                                    <span class="grey-text">- Tank 1 (Diesel)</span>
+                                                </div>                                                                                                                                                                                
+                                            </div>
+                                            <div class="w-50">
+                                                <div class="d-flex justify-between">
+                                                    <div class="range-chart dashboard-cards-row">
+                                                        <div class="liter"></div>
+                                                        <div class="low-level"></div>
+                                                        <div class="reorder-level"></div>
+                                                    </div>
+                                                    <span class="material-icons warning circle-icon warning">
+                                                        warning
+                                                    </span> 
+                                                </div>
+                                                <div class="d-flex justify-between">
+                                                    <div class="range-chart dashboard-cards-row">
+                                                        <div class="liter"></div>
+                                                        <div class="low-level"></div>
+                                                        <div class="reorder-level"></div>
+                                                    </div>
+                                                    <span class="material-icons warning circle-icon warning">
+                                                        warning
+                                                    </span> 
+                                                </div>
+                                                <div class="d-flex justify-between">
+                                                    <div class="range-chart dashboard-cards-row">
+                                                        <div class="liter"></div>
+                                                        <div class="low-level"></div>
+                                                        <div class="reorder-level"></div>
+                                                    </div>
+                                                    <span class="material-icons info circle-icon info-circle-icon">info</span>  
+                                                </div>
+                                                <div class="d-flex justify-between">
+                                                    <div class="range-chart dashboard-cards-row">
+                                                        <div class="liter"></div>
+                                                        <div class="low-level"></div>
+                                                        <div class="reorder-level"></div>
+                                                    </div>
+                                                    <span class="material-icons info circle-icon info-circle-icon">info</span>  
+                                                </div>
+                                                <div class="d-flex justify-between">
+                                                    <div class="range-chart dashboard-cards-row">
+                                                        <div class="liter"></div>
+                                                        <div class="low-level"></div>
+                                                        <div class="reorder-level"></div>
+                                                    </div>
+                                                    <span class="material-icons info circle-icon info-circle-icon">info</span>  
+                                                </div>                                                                                                                                                                                                
+                                            </div>
+                                        </div>
+                                        <div class="info-alert">
+                                            <span class="material-icons info circle-icon">info</span>  
+                                            <p>2 Tanks without alert levels set  (See more)</p>
+                                        </div>
+                                    </div>
+                                    <div class="card w-full">
+                                        <p class="label">Tanks soonest empty</p>
+                                        <div class="d-flex">
+                                            <div>
+                                                <div class="dashboard-cards-row mb-18 chart-label">
+                                                    <span class="blue-text">London</span>
+                                                    <span class="grey-text">- Tank 1 (AdBlue)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row mb-18 chart-label">
+                                                    <span class="blue-text">Manchester</span>
+                                                    <span class="grey-text">- Tank 2 (Diesel)</span>
+                                                </div>                                                
+                                                <div class="dashboard-cards-row mb-18 chart-label">
+                                                    <span class="blue-text">Liverpool</span>
+                                                    <span class="grey-text">- Tank 1 (HVO)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row mb-18 chart-label">
+                                                    <span class="blue-text">Gatwick</span>
+                                                    <span class="grey-text">- Tank 1 (Diesel)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row mb-18 chart-label">
+                                                    <span class="blue-text">Bolton</span>
+                                                    <span class="grey-text">- Tank 3 (Diesel)</span>
+                                                </div>                                                                                                                                                                                
+                                            </div>
+                                            <div style="margin-top: -10px;">
+                                                <canvas id="horizontal-chart" aria-label="chart"  height="285" width="210"></canvas>                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card w-full">
+                                        <p class="label">Max Ullage</p>
+                                        <div class="d-flex">
+                                            <div>
+                                                <div class="dashboard-cards-row mb-18 chart-label">
+                                                    <span class="blue-text">London</span>
+                                                    <span class="grey-text">- Tank 1 (AdBlue)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row mb-18 chart-label">
+                                                    <span class="blue-text">Manchester</span>
+                                                    <span class="grey-text">- Tank 2 (Diesel)</span>
+                                                </div>                                                
+                                                <div class="dashboard-cards-row mb-18 chart-label">
+                                                    <span class="blue-text">Liverpool</span>
+                                                    <span class="grey-text">- Tank 1 (HVO)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row mb-18 chart-label">
+                                                    <span class="blue-text">Gatwick</span>
+                                                    <span class="grey-text">- Tank 1 (Diesel)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row mb-18 chart-label">
+                                                    <span class="blue-text">Bolton</span>
+                                                    <span class="grey-text">- Tank 3 (Diesel)</span>
+                                                </div>                                                                                                                                                                                
+                                            </div>
+                                            <div style="margin-top: -5px;">
+                                                <canvas id="horizontal-chart2" aria-label="chart"  height="295" width="210"></canvas>                                                
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-5 mb-5">
+                                    <div class="card w-full">
+                                        <p class="label">Misc. Tanks Alerts 24H</p>
+                                        <div class="d-flex justify-between gap-3">
+                                            <div>
+                                                <div class="dashboard-cards-row ">
+                                                    <span class="blue-text">London</span>
+                                                    <span class="grey-text">- Tank 1 (AdBlue)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row ">
+                                                    <span class="blue-text">Manchester</span>
+                                                    <span class="grey-text">- Tank 2 (Diesel)</span>
+                                                </div>                                                
+                                                <div class="dashboard-cards-row ">
+                                                    <span class="blue-text">Liverpool</span>
+                                                    <span class="grey-text">- Tank 1 (HVO)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row ">
+                                                    <span class="blue-text">Gatwick</span>
+                                                    <span class="grey-text">- Tank 1 (Diesel)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row ">
+                                                    <span class="blue-text">Bolton</span>
+                                                    <span class="grey-text">- Tank 3 (Diesel)</span>
+                                                </div>                                                                                                                                                                                
+                                            </div>
+                                            <div>
+                                                <div class="dashboard-cards-row">
+                                                    <span class="grey-text">Overfill</span>
+                                                </div>
+                                                <div class="dashboard-cards-row">
+                                                    <span class="grey-text">Above Max Temp</span>
+                                                </div>    
+                                                <div class="dashboard-cards-row">
+                                                    <span class="grey-text">Above Max Temp</span>
+                                                </div>  
+                                                <div class="dashboard-cards-row">
+                                                    <span class="grey-text">Overfill</span>
+                                                </div>  
+                                                <div class="dashboard-cards-row">
+                                                    <span class="grey-text">Above Max Temp</span>
+                                                </div>                                                                                                                                                                                              
+                                            </div>   
+                                            <div>
+                                                <div class="mb-18">
+                                                    <span class="material-icons info circle-icon info-circle-icon">info</span>  
+                                                </div>
+                                                <div class="mb-18">
+                                                    <span class="material-icons info circle-icon info-circle-icon">info</span>  
+                                                </div>
+                                                <div class="mb-18">
+                                                    <span class="material-icons info circle-icon info-circle-icon">info</span>  
+                                                </div>
+                                                <div class="mb-18">
+                                                    <span class="material-icons info circle-icon info-circle-icon">info</span>  
+                                                </div>
+                                                <div class="mb-18">
+                                                    <span class="material-icons info circle-icon info-circle-icon">info</span>  
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="info-alert">
+                                            <span class="material-icons info circle-icon">info</span>  
+                                            <p>2 Tanks without alert levels set  (See more)</p>
+                                        </div>                                
+                                    </div>
+                                    <div class="card w-full">
+                                        <p class="label">Stock Discrepancy 24H > 1%</p> 
+                                        <div class="d-flex justify-between">
+                                            <div>
+                                                <div class="dashboard-cards-row">
+                                                    <span class="blue-text">London</span>
+                                                    <span class="grey-text">- Tank 1 (AdBlue)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row ">
+                                                    <span class="blue-text">Manchester</span>
+                                                    <span class="grey-text">- Tank 2 (Diesel)</span>
+                                                </div>                                                
+                                                <div class="dashboard-cards-row ">
+                                                    <span class="blue-text">Liverpool</span>
+                                                    <span class="grey-text">- Tank 1 (HVO)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row ">
+                                                    <span class="blue-text">Gatwick</span>
+                                                    <span class="grey-text">- Tank 1 (Diesel)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row ">
+                                                    <span class="blue-text">Bolton</span>
+                                                    <span class="grey-text">- Tank 3 (Diesel)</span>
+                                                </div>                                                                                                                                                                                
+                                            </div>
+                                            <div>
+                                                <div class="trending trending-up mb-22">
+                                                    <span class="material-icons trending_up">
+                                                        trending_up
+                                                    </span>
+                                                    4.7%
+                                                </div>
+                                                <div class="trending trending-down mb-22">
+                                                    <span class="material-icons trending_down">
+                                                        trending_down
+                                                    </span>
+                                                    3.1%
+                                                </div>
+                                                <div class="trending trending-up mb-22">
+                                                    <span class="material-icons trending_up">
+                                                        trending_up
+                                                    </span>
+                                                    2.1%
+                                                </div>
+                                                <div class="trending trending-up mb-22">
+                                                    <span class="material-icons trending_up">
+                                                        trending_up
+                                                    </span>
+                                                    1.5%
+                                                </div>
+                                                <div class="trending trending-down mb-22">
+                                                    <span class="material-icons trending_down">
+                                                        trending_down
+                                                    </span>
+                                                    1.2%
+                                                </div>                                                                                                                                                                                                
+                                            </div>
+                                            <div>
+                                                <div class="mb-18">
+                                                    <span class="material-icons warning circle-icon">warning</span>  
+                                                </div>
+                                                <div class="mb-18">
+                                                    <span class="material-icons warning circle-icon ">warning</span>  
+                                                </div>
+                                                <div class="mb-18">
+                                                    <span class="material-icons info circle-icon info-circle-icon">info</span>  
+                                                </div>
+                                                <div class="mb-18">
+                                                    <span class="material-icons info circle-icon info-circle-icon">info</span>  
+                                                </div>
+                                                <div class="mb-18">
+                                                    <span class="material-icons info circle-icon info-circle-icon">info</span>  
+                                                </div>
+                                            </div>                                             
+                                        </div>
+                                    </div>
+                                    <div class="card w-full">
+                                        <p class="label">DIP out of date (hours since last)</p>
+                                        <div class="d-flex gap-3">
+                                            <div>
+                                                <div class="dashboard-cards-row mb-18 chart-label">
+                                                    <span class="blue-text">London</span>
+                                                    <span class="grey-text">- Tank 1 (AdBlue)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row mb-18 chart-label">
+                                                    <span class="blue-text">Manchester</span>
+                                                    <span class="grey-text">- Tank 2 (Diesel)</span>
+                                                </div>                                                
+                                                <div class="dashboard-cards-row mb-18 chart-label">
+                                                    <span class="blue-text">Liverpool</span>
+                                                    <span class="grey-text">- Tank 1 (HVO)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row mb-18 chart-label">
+                                                    <span class="blue-text">Gatwick</span>
+                                                    <span class="grey-text">- Tank 1 (Diesel)</span>
+                                                </div>
+                                                <div class="dashboard-cards-row mb-18 chart-label">
+                                                    <span class="blue-text">Bolton</span>
+                                                    <span class="grey-text">- Tank 3 (Diesel)</span>
+                                                </div>                                                                                                                                                                                
+                                            </div>
+                                            <div style="margin-top: -10px;">
+                                                <canvas id="horizontal-chart3" aria-label="chart"  height="285" width="210"></canvas>                                                
+                                            </div>
+                                        </div>    
+                                        <div class="info-alert">
+                                            <span class="material-icons info circle-icon">info</span>  
+                                            <p>1 Site is offline (See more)</p>
+                                        </div> 
+                                    </div>                                                                        
+                                </div>
+                            </div> -->
+
+                        </div>
+                    </div>
+                    <!-- footer -->
+
+                    <div class="footer">
+                        <span>© MCS Systems Lorum Epsum 2023</span>
+                        <a class="mdc-button">
+                            Privacy Policy
+                        </a>
+                        <a class="mdc-button">
+                            Data Protection
+                        </a>
+                        <a class="mdc-button">
+                            Feedback
+                        </a>
+                        <a class="mdc-button">
+                            Support
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../constants.js" type="module"></script>
+    <script src="../sites/sites.js" type="module"></script>
+    <script src="../sites/filter.js" type="module"></script>
+    <script src="./script.js" type="module"></script>
+
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+</body>
+
+</html>

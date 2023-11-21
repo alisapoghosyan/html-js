@@ -1,0 +1,318 @@
+.cards-content .filter {
+    display: flex;
+    align-items: center;
+    max-width: 1375px;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.cards-content .filter .column {
+    border-radius: 100px;
+    border: 1px solid var(--gray-chip-medium, #E0E0E0);
+    max-width: 277px;
+    width: 100%;
+    padding: 4px;
+    color: #0000008A;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    gap: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-content .edit-remove-crud {
+    color: #1C8DC7;
+    display: flex;
+    gap: 10px;
+
+}
+
+.cards-content .edit-remove-crud div {
+    cursor: pointer;
+}
+
+.filter-cards {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.filter-list-select {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid var(--MCS-Grey-Light, #D1CFCF);
+    background: var(--MCS-Grey-UI-Lightest, #F2F2F2);
+    padding: 8px 6px;
+    gap: 17px;
+    max-width: 971px;
+    width: 100%;
+    height: 47px;
+}
+
+.filter-cards .material-icons {
+    color: #757575;
+}
+
+.filter-list-select .filter-list {
+    color: #6f6f6f;
+}
+
+.filter-cards .select {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: var(--black-inactive, rgba(0, 0, 0, 0.54));
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    background-color: white;
+    border-radius: 100px;
+    background: var(--Colour-Menu-Bg-On, #FFF);
+    padding: 4px 12px 4px 4px;
+}
+
+.content-cards-table {
+    display: flex;
+    flex-direction: column;
+    max-width: 1375px;
+    margin: auto;
+}
+
+.content-cards-table .export-btn {
+    align-self: flex-end;
+    margin-bottom: 24px;
+}
+
+
+.cards-table tr:first-child th:nth-child(3) {
+    width: 170px !important;
+}
+
+.cards-table tr:first-child th:nth-child(4) {
+    width: 145px !important;
+}
+
+.cards-table tr:first-child th:nth-child(5) {
+    width: 109px !important;
+}
+
+.pan-customer-fields {
+    max-width: 422px;
+    width: 100%;
+
+}
+
+.pan-customer-fields .text-box {
+    height: 56px;
+}
+
+.pan-customer-fields .date-with-pin {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding-top: 27px;
+}
+
+.pan-customer-fields .date-field,
+.pan-customer-fields .input-select {
+    width: 50%;
+}
+
+.pan-customer-fields .input-select {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.pan-customer-fields .enabled-div {
+    height: 212px;
+    border-radius: 20px;
+    border: 1px solid var(--gray-divider, #E5E5E5);
+    background: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 2px;
+    gap: 10px;
+    margin-top: 20px;
+    z-index: 10;
+    position: relative;
+}
+
+.pan-customer-fields .enable {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 20px;
+    background: var(--success-light, #ECF9F3);
+    padding-bottom: 18px;
+}
+
+.pan-customer-fields .material-icons {
+    color: #394a64;
+    padding-top: 37px;
+}
+
+.pan-customer-fields .enabled-div .text-box {
+    height: 37px;
+    padding-block: 0;
+    color: var(--black-high-emphasis, rgba(0, 0, 0, 0.87));
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.card-holder {
+    max-width: 234px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+.card-holder .holder-card-btn {
+    border-radius: 20px;
+    border: 1px solid var(--MCS-Grey-Light, #D1CFCF);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22px 14px 12px 15px;
+    max-height: 300px;
+    z-index: 10;
+    position: relative;
+
+}
+
+.card-holder .holder-card-btn .links-card {
+    color: var(--black-inactive, rgba(0, 0, 0, 0.54));
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 24px;
+}
+
+.card-holder .holder-card-btn button {
+    margin-bottom: 17px;
+    width: 100%;
+}
+
+.card-holder .holder-card-btn button {
+    font-size: 14px;
+}
+
+.card-holder .text-box {
+    height: 56px;
+}
+
+.appended-card-edit {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    position: relative;
+}
+.appended-card-edit .text-box{
+    background-color: white;
+}
+.appended-card-edit .bg-div {
+    top: -70px !important;
+    width: 102% !important;
+    left: -14px;
+}
+
+.vehicle-fields {
+    max-width: 280px;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid var(--MCS-Grey-Light, #D1CFCF);
+    padding: 21px 28px;
+}
+
+.vehicle-fields button {
+    align-self: center !important;
+    width: 100%;
+}
+
+.vehicle-fields button .material-icons,
+.vehicle-fields button svg {
+    padding-right: 8px;
+}
+
+.vehicle-fields .text-box {
+    height: 56px;
+    width: 100%;
+    margin-top: 21px;
+}
+
+.vehicle-fields .radio {
+    width: 100%;
+    color: var(--black-inactive, rgba(0, 0, 0, 0.54));
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.vehicle-fields .radio-labels {
+    display: flex;
+    align-items: center;
+}
+
+.vehicle-fields .propmt {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: var(--black-inactive, rgba(0, 0, 0, 0.54));
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.vehicle-fields .propmt .mdc-checkbox {
+    padding: 7px;
+}
+
+.text-box-visible {
+    position: relative;
+}
+
+.text-box-visible .material-icons {
+    position: absolute;
+    top: 15px;
+    padding: 0;
+    right: 15px;
+    color: #757575;
+}
+
+@media (max-width:1400px) {
+    .appended-card-edit {
+        flex-direction: column;
+    }
+
+    .pan-customer-fields,
+    .card-holder,
+    .vehicle-fields {
+        width: 100%;
+        max-width: unset;
+    }
+}

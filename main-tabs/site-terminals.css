@@ -1,0 +1,58 @@
+#site-terminals {
+    display: flex;
+    flex-direction: column;
+    gap: 57px;
+}
+
+.terminals-items {
+    display: flex;
+    border-radius: 4px;
+    border: 1px solid #E5E5E5;
+    padding: 21px 18px 0 0px;
+}
+
+.terminals-items .ticket-num {
+    font-size: 16px;
+    color: #212121;
+    padding-bottom: 19px;
+}
+
+.terminals-items .terminals-container {
+    width: 100%;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15px;
+    color: #000000CC;
+}
+
+.terminals-items .flex {
+    display: flex;
+    gap: 47px;
+    padding-block: 13px;
+    border-bottom: 1px solid #E5E5E5;
+    padding-left: 18px;
+}
+
+.terminals-items span {
+    max-width: 198px;
+    width: 100%;
+}
+
+.terminals-items .check-icon {
+    color: #3BCB08;
+}
+
+.terminals-items .error-icon {
+    color: #FF781E;
+}
+
+.terminals-items .status-activity {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.terminals-items .status-activity .material-icons {
+    width: max-content;
+}

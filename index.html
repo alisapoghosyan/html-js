@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./main-tabs/site-terminals.css">
+    <link rel="stylesheet" href="./dialog/dialog.css">
     <link rel="stylesheet" type="text/css"
         href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,12 +24,12 @@
                 </span>
             </button>
             <div class="menu-icon">
-                <button class="mdc-button" onmouseenter="showMenu()">
+                <a class="mdc-button" onmouseenter="showMenu()" href="/">
                     <span class="material-icons mdc-button__icon">
                         dashboard
                     </span>
                     <span class="mdc-button__label">Home</span>
-                </button>
+                </a>
             </div>
             <div class="menu-icon">
                 <button class="mdc-button">
@@ -54,20 +56,20 @@
                 </button>
             </div>
             <div class="menu-icon">
-                <button class="mdc-button">
+                <a class="mdc-button" href="/sites">
                     <span class="material-icons mdc-button__icon">
                         location_on
                     </span>
                     <span class="mdc-button__label">Sites</span>
-                </button>
+                </a>
             </div>
             <div class="menu-icon">
-                <button class="mdc-button">
+                <a class="mdc-button" href="/cards">
                     <span class="material-icons mdc-button__icon">
                         style
                     </span>
                     <span class="mdc-button__label">Cards</span>
-                </button>
+                </a>
             </div>
             <div class="menu-icon">
                 <button class="mdc-button">
@@ -86,12 +88,12 @@
                 </button>
             </div>
             <div class="menu-icon">
-                <button class="mdc-button">
+                <a class="mdc-button" href="/groups">
                     <span class="material-icons mdc-button__icon">
                         folder
                     </span>
                     <span class="mdc-button__label">Groups</span>
-                </button>
+                </a>
             </div>
             <div class="menu-icon">
                 <button class="mdc-button">
@@ -181,63 +183,63 @@
 
                 <!-- menu sidebar -->
                 <div class="menu-sidebar mdc-theme--primary mdc-theme--surface" id="menu-sidebar">
-                   <div class="sub-menu-container">
-                    <span class="title">Sites</span>
-                    <button class="mdc-button">
-                        <span class="material-icons mdc-button__icon">
-                            location_on
-                        </span>
-                        <span class="mdc-button__label">All Sites</span>
-                    </button>
-                    <button class="mdc-button">
-                        <span class="material-icons mdc-button__icon">
-                            <span class="material-icons">
-                                bookmark
+                    <div class="sub-menu-container">
+                        <span class="title">Sites</span>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                location_on
                             </span>
-                        </span>
-                        <span class="mdc-button__label">Add Dip Read</span>
-                    </button>
-                    <button class="mdc-button">
-                        <span class="material-icons mdc-button__icon">
-                            <span class="material-icons">
-                                bookmark
+                            <span class="mdc-button__label">All Sites</span>
+                        </button>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                <span class="material-icons">
+                                    bookmark
+                                </span>
                             </span>
-                        </span>
-                        <span class="mdc-button__label">Deliveries</span>
-                    </button>
-                    <button class="mdc-button">
-                        <span class="material-icons mdc-button__icon">
-                            <span class="material-icons">
-                                bookmark
+                            <span class="mdc-button__label">Add Dip Read</span>
+                        </button>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                <span class="material-icons">
+                                    bookmark
+                                </span>
                             </span>
-                        </span>
-                        <span class="mdc-button__label">Dip Readings</span>
-                    </button>
-                    <button class="mdc-button">
-                        <span class="material-icons mdc-button__icon">
-                            <span class="material-icons">
-                                bookmark
+                            <span class="mdc-button__label">Deliveries</span>
+                        </button>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                <span class="material-icons">
+                                    bookmark
+                                </span>
                             </span>
-                        </span>
-                        <span class="mdc-button__label">Transactions</span>
-                    </button>
-                    <button class="mdc-button">
-                        <span class="material-icons mdc-button__icon">
-                            <span class="material-icons">
-                                bookmark
+                            <span class="mdc-button__label">Dip Readings</span>
+                        </button>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                <span class="material-icons">
+                                    bookmark
+                                </span>
                             </span>
-                        </span>
-                        <span class="mdc-button__label">Terminals</span>
-                    </button>
-                    <button class="mdc-button">
-                        <span class="material-icons mdc-button__icon">
-                            <span class="material-icons">
-                                bookmark
+                            <span class="mdc-button__label">Transactions</span>
+                        </button>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                <span class="material-icons">
+                                    bookmark
+                                </span>
                             </span>
-                        </span>
-                        <span class="mdc-button__label">Reconcilliations</span>
-                    </button>
-                   </div>
+                            <span class="mdc-button__label">Terminals</span>
+                        </button>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                <span class="material-icons">
+                                    bookmark
+                                </span>
+                            </span>
+                            <span class="mdc-button__label">Reconcilliations</span>
+                        </button>
+                    </div>
                 </div>
 
                 <div class="main-page-wrapper" id="main-wrapper">
@@ -266,12 +268,13 @@
                             <!-- tabs -->
                             <div class="mdc-tab-bar" role="tablist">
                                 <div class="mdc-tab-scroller">
-                                    <div class="mdc-tab-scroller__scroll-area">
+                                    <div class="mdc-tab-scroller__scroll-area main-page-tabs">
                                         <div class="mdc-tab-scroller__scroll-content">
-                                            <button class="mdc-tab tab-active" role="tab" aria-selected="true" autofocus
-                                                tabindex="0">
+                                            <button class="mdc-tab tab-active" role="tab" data-tabid="site-overview"
+                                                aria-selected="true" autofocus tabindex="0">
                                                 <span class="mdc-tab__content">
-                                                    <span class="mdc-tab__text-label mdc-theme--primary">Site Overview</span>
+                                                    <span class="mdc-tab__text-label mdc-theme--primary">Site
+                                                        Overview</span>
                                                 </span>
                                                 <span class="mdc-tab-indicator">
                                                     <span
@@ -291,7 +294,8 @@
                                             </button>
                                             <button class="mdc-tab" role="tab" aria-selected="false" tabindex="2">
                                                 <span class="mdc-tab__content">
-                                                    <span class="mdc-tab__text-label mdc-theme--primary">Deliveries</span>
+                                                    <span
+                                                        class="mdc-tab__text-label mdc-theme--primary">Deliveries</span>
                                                 </span>
                                                 <span class="mdc-tab-indicator">
                                                     <span
@@ -301,7 +305,8 @@
                                             </button>
                                             <button class="mdc-tab" role="tab" aria-selected="false" tabindex="3">
                                                 <span class="mdc-tab__content">
-                                                    <span class="mdc-tab__text-label mdc-theme--primary">Dip Readings</span>
+                                                    <span class="mdc-tab__text-label mdc-theme--primary">Dip
+                                                        Readings</span>
                                                 </span>
                                                 <span class="mdc-tab-indicator">
                                                     <span
@@ -311,7 +316,8 @@
                                             </button>
                                             <button class="mdc-tab" role="tab" aria-selected="false" tabindex="4">
                                                 <span class="mdc-tab__content">
-                                                    <span class="mdc-tab__text-label mdc-theme--primary">Transactions</span>
+                                                    <span
+                                                        class="mdc-tab__text-label mdc-theme--primary">Transactions</span>
                                                 </span>
                                                 <span class="mdc-tab-indicator">
                                                     <span
@@ -321,7 +327,8 @@
                                             </button>
                                             <button class="mdc-tab" role="tab" aria-selected="false" tabindex="5">
                                                 <span class="mdc-tab__content">
-                                                    <span class="mdc-tab__text-label mdc-theme--primary">Terminals</span>
+                                                    <span
+                                                        class="mdc-tab__text-label mdc-theme--primary">Terminals</span>
                                                 </span>
                                                 <span class="mdc-tab-indicator">
                                                     <span
@@ -331,7 +338,8 @@
                                             </button>
                                             <button class="mdc-tab" role="tab" aria-selected="false" tabindex="6">
                                                 <span class="mdc-tab__content">
-                                                    <span class="mdc-tab__text-label mdc-theme--primary">Reconciliations</span>
+                                                    <span
+                                                        class="mdc-tab__text-label mdc-theme--primary">Reconciliations</span>
                                                 </span>
                                                 <span class="mdc-tab-indicator">
                                                     <span
@@ -549,19 +557,570 @@
                                         </button>
                                     </div>
                                     <div id="map"></div>
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2734.9696472127184!2d-3.1773736301430864!3d51.561896370570764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e1f92575970b1%3A0xe5e9b7c69f6cef29!2sNant%20y%20Cwm%20Farm%20Entrance!5e1!3m2!1sen!2sam!4v1694759386622!5m2!1sen!2sam"
-                                         width="100%"
-                                          height="469" 
-                                           style="border:0;" 
-                                           allowfullscreen="" 
-                                           loading="lazy"
-                                            referrerpolicy="no-referrer-when-downgrade">
-                                        </iframe>
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2734.9696472127184!2d-3.1773736301430864!3d51.561896370570764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e1f92575970b1%3A0xe5e9b7c69f6cef29!2sNant%20y%20Cwm%20Farm%20Entrance!5e1!3m2!1sen!2sam!4v1694759386622!5m2!1sen!2sam"
+                                        width="100%" height="469" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
                                 </div>
                             </div>
 
                             <!-- tanks ->>>> todo -->
-                            <div class="container"></div>
+                            <div class="container">
+                                <div class="tank-card">
+                                    <div class="accordion">
+                                        <span class="material-icons row-icon arrow mdc-theme--primary accordion-icon">chevron_right</span>                                
+                                        <span>Tank 1 - Main Diesel Tank</span>
+                                    </div>
+                                    <div class="border">
+                                        <div class="accordion-content">
+                                            <div class="left-side">
+                                                <div class="d-flex gap-5 mb-5">
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">name</span>
+                                                        <input placeholder="" />
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Capacity</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Overfill</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex gap-5 mb-5">
+                                                    <div class="text-box add-reading-text-boxs with-select">
+                                                        <span class="title mdc-theme--surface">Customer</span>
+                                                        <select>
+                                                            <option>111</option>
+                                                            <option>222</option>
+                                                            <option>333</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Number</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Reorder Level</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                </div>   
+                                                <div class="d-flex gap-5 mb-5">
+                                                    <div class="text-box add-reading-text-boxs border-none"></div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Ullage</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Low Level</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex gap-5">
+                                                    <div class="text-box add-reading-text-boxs border-none d-flex gap-3 px-0">
+                                                        <button class="mdc-button mdc-button--outlined" style="max-width: 92px; width: 100%;">
+                                                            <span class="mdc-button__label">Reset</span>
+                                                        </button>
+                                                        <button class="mdc-button mdc-button--raised" style="max-width: 92px;  width: 100%;">
+                                                            <span class="mdc-button__label">save</span>
+                                                        </button>                                                    
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Estimated Days Remaining</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Max Temperature</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>                                                
+                                                </div>                                                                                      
+                                            </div>
+                                            <div class="right-side">
+                                                <div class="d-flex gap-5">
+                                                    <div class="chart-sectio">
+                                                        <div class="barrel-box">
+                                                            <div class="name">Tank 1 – Diesel</div>
+                                                            <div class="barrel">
+                                                                <div class="liter"></div>
+                                                                <div class="overfill"></div>
+                                                                <div class="reorder-level"></div>
+                                                                <div class="low-level"></div>
+                                                            </div>
+                                                            <div class="table">
+                                                                <div class="left"></div>
+                                                                <div class="right"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="estimated-volume">
+                                                            <div class="number">7</div>
+                                                            <div class="number">0</div>
+                                                            <div class="number">0</div>
+                                                            <div class="number">0</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="status-section">
+                                                        <div class="status">
+                                                            <span class="material-icons check-icon">
+                                                                check_circle
+                                                            </span>
+                                                            <p>Status: OK</p>
+                                                        </div>
+                                                        <div class="conection">
+                                                            <label class="switch">
+                                                                <input type="checkbox" checked>
+                                                                <span class="slider round"></span>
+                                                              </label>  
+                                                              <p>No Tank Gauge Connected</p>                                                      
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="show-more-section">
+                                                    <div class="show-more">
+                                                        <span class="show-more-btn" id="0">Show more...</span>
+                                                    </div>
+                                                    <div>
+                                                        <button class="mdc-button mdc-button--raised">
+                                                            <span class="mdc-button__label">
+                                                                <span class="material-icons add-icon">
+                                                                    add
+                                                                </span>
+                                                                DIP
+                                                            </span>
+                                                        </button> 
+                                                        <button class="mdc-button mdc-button--raised" >
+                                                            <span class="mdc-button__label">
+                                                                <span class="material-icons add-icon">
+                                                                    add
+                                                                </span>
+                                                                Delivery
+                                                            </span>
+                                                        </button> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="accordion-1" class="more-content">
+                                            <div class="left-side">
+                                                <div class="d-flex gap-5 mb-5">
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Last DIP Volume</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Average Daily Output</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Delivery since last DIP</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                </div>    
+                                                <div class="d-flex gap-5 mb-5">
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Last DIP Date / Time</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Avg. Daily Output % of Tank</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Estimated Remaining Volume</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                </div> 
+                                                <div class="d-flex gap-5 mb-5 reconciliation">
+                                                    <div class="reconciliation-card">
+                                                        <div class="label">
+                                                            <span class="material-icons label-icon">
+                                                                trending_up
+                                                            </span>
+                                                            <span class="label-text">
+                                                                Reconciliation
+                                                            </span>
+                                                        </div>
+                                                        <div class="reconciliation-card-content">
+                                                            <span>Stock Discrepancy 24H</span>
+                                                            <p>                                                            
+                                                                <span class="material-icons trending-up">
+                                                                    trending_up
+                                                                </span>
+                                                                1.5%
+                                                            </p>
+                                                        </div>
+                                                        <button class="mdc-button mdc-button--raised report-btn rounded-0 button-alert">
+                                                            <span class="mdc-button__label">Reconciliation Report</span>
+                                                        </button> 
+                                                    </div>
+                                                    <div class="reconciliation-card">
+                                                        <div class="label">
+                                                            <img src="assets/notification.png" alt="notification">
+                                                            <span class="label-text">
+                                                                In Tank Alert Schemes
+                                                            </span>
+                                                        </div>
+                                                        <div class="actions">
+                                                            <p>All sites</p>
+                                                            <div class="d-flex gap-1">
+                                                                <span class="material-icons">
+                                                                    remove_red_eye
+                                                                </span>
+                                                                <span class="material-icons">
+                                                                    edit
+                                                                </span>
+                                                                <span class="material-icons">
+                                                                    content_copy
+                                                                </span>
+                                                                <span class="material-icons">
+                                                                    delete
+                                                                </span>                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="actions">
+                                                            <p>North</p>
+                                                            <div class="d-flex gap-1">
+                                                                <span class="material-icons">
+                                                                    remove_red_eye
+                                                                </span>
+                                                                <span class="material-icons">
+                                                                    edit
+                                                                </span>
+                                                                <span class="material-icons">
+                                                                    content_copy
+                                                                </span>
+                                                                <span class="material-icons">
+                                                                    delete
+                                                                </span>                                                                
+                                                            </div>
+                                                        </div>  
+                                                        <button class="mdc-button mdc-button--raised alert-btn rounded-0 button-alert">
+                                                            <span class="mdc-button__label">Add Tank Alert Scheme</span>
+                                                        </button>                                                       
+                                                    </div>                                                    
+                                                </div>
+                                                <div class="tanks-alert">
+                                                    <p class="label">Misc. Tanks Alerts 7 Days</p>
+                                                    <div class="tanks-alert-content">
+                                                        <div>
+                                                            <span class="city">Manchester </span>
+                                                            <span class="gery-text">- Tank 2 (Diesel)</span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="gery-text">2023 Sep 13 12:42</span>
+                                                            <span class="gery-text">Overfill</span>
+                                                        </div>
+                                                        <span class="material-icons mdc-theme--error">
+                                                            warning
+                                                        </span>
+                                                    </div>
+                                                    <div class="tanks-alert-content">
+                                                        <div>
+                                                            <span class="city">Manchester </span>
+                                                            <span class="gery-text">- Tank 2 (Diesel)</span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="gery-text">2023 Sep 13 12:42</span>
+                                                            <span class="gery-text">Overfill</span>
+                                                        </div>
+                                                        <span class="material-icons mdc-theme--error">
+                                                            warning
+                                                        </span>
+                                                    </div>                                                    
+                                                </div>
+                                            </div>
+                                            <div class="right-side">
+                                                <div class="chart-card">
+                                                    <div class="label">Historic level</div>
+                                                    <canvas id="chartId" aria-label="chart" heigth="350" width="580"></canvas>
+                                                </div>
+                                                <div class="chart-card">
+                                                    <div class="label">Predicted level</div>
+                                                    <canvas id="chartId2" aria-label="chart" heigth="350" width="580"></canvas>
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                        <p class="show-less">Show less...</p>
+                                    </div>
+                                </div>
+                                <div class="tank-card">
+                                    <div class="accordion">
+                                        <span class="material-icons row-icon arrow mdc-theme--primary accordion-icon">chevron_right</span>                                
+                                        <span>Tank 2 - AdBlue Tank</span>
+                                    </div>
+                                    <div class="border">
+                                        <div class="accordion-content">
+                                            <div class="left-side">
+                                                <div class="d-flex gap-5 mb-5">
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">name</span>
+                                                        <input placeholder="" />
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Capacity</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Overfill</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex gap-5 mb-5">
+                                                    <div class="text-box add-reading-text-boxs with-select">
+                                                        <span class="title mdc-theme--surface">Customer</span>
+                                                        <select>
+                                                            <option>111</option>
+                                                            <option>222</option>
+                                                            <option>333</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Number</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Reorder Level</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                </div>   
+                                                <div class="d-flex gap-5 mb-5">
+                                                    <div class="text-box add-reading-text-boxs border-none"></div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Ullage</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Low Level</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex gap-5">
+                                                    <div class="text-box add-reading-text-boxs border-none d-flex gap-3 px-0" >
+                                                        <button class="mdc-button mdc-button--outlined" style="max-width: 92px; width: 100%;">
+                                                            <span class="mdc-button__label">Reset</span>
+                                                        </button>
+                                                        <button class="mdc-button mdc-button--raised" style="max-width: 92px;  width: 100%;">
+                                                            <span class="mdc-button__label">save</span>
+                                                        </button>                                                    
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Estimated Days Remaining</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Max Temperature</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>                                                
+                                                </div>                                                                                      
+                                            </div>
+                                            <div class="right-side">
+                                                <div class="d-flex gap-5">
+                                                    <div class="chart-sectio">
+                                                        <div class="barrel-box">
+                                                            <div class="name">Tank 1 – Diesel</div>
+                                                            <div class="barrel">
+                                                                <div class="liter"></div>
+                                                                <div class="overfill"></div>
+                                                                <div class="reorder-level"></div>
+                                                                <div class="low-level"></div>
+                                                            </div>
+                                                            <div class="table">
+                                                                <div class="left"></div>
+                                                                <div class="right"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="estimated-volume">
+                                                            <div class="number">7</div>
+                                                            <div class="number">0</div>
+                                                            <div class="number">0</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="status-section">
+                                                        <div class="status">
+                                                            <span class="material-icons check-icon">
+                                                                check_circle
+                                                            </span>
+                                                            <p>Status: OK</p>
+                                                        </div>
+                                                        <div class="conection">
+                                                            <label class="switch">
+                                                                <input type="checkbox" checked>
+                                                                <span class="slider round"></span>
+                                                              </label>  
+                                                              <p>No Tank Gauge Connected</p>                                                      
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="show-more-section">
+                                                    <div class="show-more" >
+                                                        <span class="show-more-btn">Show more...</span>
+                                                    </div>
+                                                    <div>
+                                                        <button class="mdc-button mdc-button--raised">
+                                                            <span class="mdc-button__label">
+                                                                <span class="material-icons add-icon">
+                                                                    add
+                                                                </span>
+                                                                DIP
+                                                            </span>
+                                                        </button> 
+                                                        <button class="mdc-button mdc-button--raised" >
+                                                            <span class="mdc-button__label">
+                                                                <span class="material-icons add-icon">
+                                                                    add
+                                                                </span>
+                                                                Delivery
+                                                            </span>
+                                                        </button> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="accordion-1" class="more-content">
+                                            <div class="left-side">
+                                                <div class="d-flex gap-5 mb-5">
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Last DIP Volume</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Average Daily Output</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Delivery since last DIP</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                </div>    
+                                                <div class="d-flex gap-5 mb-5">
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Last DIP Date / Time</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Avg. Daily Output % of Tank</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                    <div class="text-box add-reading-text-boxs">
+                                                        <span class="title mdc-theme--surface">Estimated Remaining Volume</span>
+                                                        <input class="text-right" placeholder="" />
+                                                    </div>
+                                                </div> 
+                                                <div class="d-flex gap-5 mb-5 reconciliation">
+                                                    <div class="reconciliation-card">
+                                                        <div class="label">
+                                                            <span class="material-icons label-icon">
+                                                                trending_up
+                                                            </span>
+                                                            <span class="label-text">
+                                                                Reconciliation
+                                                            </span>
+                                                        </div>
+                                                        <div class="reconciliation-card-content">
+                                                            <span>Stock Discrepancy 24H</span>
+                                                            <p>                                                            
+                                                                <span class="material-icons trending-up">
+                                                                    trending_up
+                                                                </span>
+                                                                1.5%
+                                                            </p>
+                                                        </div>
+                                                        <button class="mdc-button mdc-button--raised report-btn rounded-0 button-alert">
+                                                            <span class="mdc-button__label">Reconciliation Report</span>
+                                                        </button> 
+                                                    </div>
+                                                    <div class="reconciliation-card">
+                                                        <div class="label">
+                                                            <img src="assets/notification.png" alt="notification">
+                                                            <span class="label-text">
+                                                                In Tank Alert Schemes
+                                                            </span>
+                                                        </div>
+                                                        <div class="actions">
+                                                            <p>All sites</p>
+                                                            <div class="d-flex gap-1">
+                                                                <span class="material-icons">
+                                                                    remove_red_eye
+                                                                </span>
+                                                                <span class="material-icons">
+                                                                    edit
+                                                                </span>
+                                                                <span class="material-icons">
+                                                                    content_copy
+                                                                </span>
+                                                                <span class="material-icons">
+                                                                    delete
+                                                                </span>                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="actions">
+                                                            <p>North</p>
+                                                            <div class="d-flex gap-1">
+                                                                <span class="material-icons">
+                                                                    remove_red_eye
+                                                                </span>
+                                                                <span class="material-icons">
+                                                                    edit
+                                                                </span>
+                                                                <span class="material-icons">
+                                                                    content_copy
+                                                                </span>
+                                                                <span class="material-icons">
+                                                                    delete
+                                                                </span>                                                                
+                                                            </div>
+                                                        </div>  
+                                                        <button class="mdc-button mdc-button--raised alert-btn rounded-0 button-alert">
+                                                            <span class="mdc-button__label">Add Tank Alert Scheme</span>
+                                                        </button>                                                       
+                                                    </div>                                                    
+                                                </div>
+                                                <div class="tanks-alert">
+                                                    <p class="label">Misc. Tanks Alerts 7 Days</p>
+                                                    <div class="tanks-alert-content">
+                                                        <div>
+                                                            <span class="city">Manchester </span>
+                                                            <span class="gery-text">- Tank 2 (Diesel)</span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="gery-text">2023 Sep 13 12:42</span>
+                                                            <span class="gery-text">Overfill</span>
+                                                        </div>
+                                                        <span class="material-icons mdc-theme--error">
+                                                            warning
+                                                        </span>
+                                                    </div>
+                                                    <div class="tanks-alert-content">
+                                                        <div>
+                                                            <span class="city">Manchester </span>
+                                                            <span class="gery-text">- Tank 2 (Diesel)</span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="gery-text">2023 Sep 13 12:42</span>
+                                                            <span class="gery-text">Overfill</span>
+                                                        </div>
+                                                        <span class="material-icons mdc-theme--error">
+                                                            warning
+                                                        </span>
+                                                    </div>                                                    
+                                                </div>
+                                            </div>
+                                            <div class="right-side">
+                                                <div class="chart-card">
+                                                    <div class="label">Historic level</div>
+                                                    <canvas id="chartId3" aria-label="chart" heigth="350" width="580"></canvas>
+                                                </div>
+                                                <div class="chart-card">
+                                                    <div class="label">Predicted level</div>
+                                                    <canvas id="chartId4" aria-label="chart" heigth="350" width="580"></canvas>
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                        <p class="show-less">Show less...</p>
+                                    </div>
+                                </div>                                
+                            </div>
 
                             <!-- deliveries -->
                             <div class="container">
@@ -580,7 +1139,7 @@
                                     <button class="mdc-button mdc-button--raised">
                                         <span class="mdc-button__label">Export Data</span>
                                     </button>
-                                    <button class="mdc-button mdc-button--raised">
+                                    <button class="mdc-button mdc-button--raised" id="add-delivery">
                                         <span class="mdc-button__label">Add Delivery</span>
                                     </button>
                                 </div>
@@ -616,10 +1175,200 @@
                                     </table>
                                 </div>
                             </div>
+                            <div class="container"></div>
+
+                            <!-- dip terminals -->
+                            <div class="container">
+                                <div id="site-terminals">
+
+                                </div>
+                            </div>
+                            <!-- dip reconciliations -->
+                            <div class="container">
+                                <div class="deliveries-header">
+                                    <div class="date-wrapper">
+                                        <span class="mdc-theme--surface">Start Date</span>
+                                        <input type="date">
+                                    </div>
+                                    <div class="date-wrapper">
+                                        <span class="mdc-theme--surface">End Date</span>
+                                        <input type="date">
+                                    </div>
+                                </div>
+                                <div class="overflow-auto">
+                                    <table class="deliveries-table" id="reconciliations-table">
+                                    </table>
+
+                                </div>
+                                <div class="pagination">
+                                    <span>Rows per page:</span>
+                                    <div class="per-page">
+                                        <span>10</span>
+                                        <span class="material-icons">
+                                            arrow_drop_down
+                                        </span>
+
+                                    </div>
+                                    <span>1-10 of 100</span>
+                                    <div class="buttons">
+                                        <span class="material-icons">
+                                            navigate_before
+                                        </span>
+
+                                        <span class="material-icons">
+                                            navigate_next
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="mdc-dialog">
+                        <div class="mdc-dialog__container">
+                            <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true"
+                                aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+                                <h2 class="mdc-dialog__title font-montserrat" id="my-dialog-title">Add Dip Reading</h2>
+                                <div class="dialog-close mdc-button mdc-dialog__button" data-mdc-dialog-action="cancel">
+                                    <span class="material-icons ">
+                                        close
+                                    </span>
+                                </div>
+                                <span class="dialog-info font-reg">Add a dip reading by choosing the site & tank number
+                                    from the drop down below and
+                                    entering a figure.</span>
+                                <div class="mdc-dialog__content" id="my-dialog-content">
+                                    <div class="mdc-add-reading-fields">
+                                    </div>
+                                    <div class="text-box">
+                                        <span class="title mdc-theme--surface">Comments</span>
+                                        <textarea></textarea>
+                                    </div>
+                                    <div class="add-reading-buttons">
+                                        <button class="mdc-button mdc-button--raised">
+                                            <span class="mdc-button__label">Cancel</span>
+                                        </button>
+                                        <button class="mdc-button mdc-button--raised">
+                                            <span class="mdc-button__label">Save</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdc-dialog__scrim"></div>
+                    </div>
+                    <div class="mdc-dialog  edit-delivery-dialog ">
+                        <div class="mdc-dialog__container">
+                            <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true"
+                                aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+                                <h2 class="mdc-dialog__title font-montserrat" id="my-dialog-title">Edit Delivery</h2>
+                                <div class="dialog-close mdc-button mdc-dialog__button" data-mdc-dialog-action="cancel">
+                                    <span class="material-icons ">
+                                        close
+                                    </span>
+                                </div>
+                                <span class="dialog-info font-reg">Edit delivery by choosing the tank number from the drop down below and completing the required fields.</span>
+                                <div class="mdc-dialog__content" id="my-dialog-content">
+                                    <div class="mdc-edit-delivery-fields">
+                                    </div>
+                                    <div class="text-box associated">
+                                        <span class="title mdc-theme--surface">Associated Documents</span>
+                                        <div class="file-wrapper">
+                                            <span class="material-icons trash-icon">
+                                                delete_forever
+                                            </span>
+                                            <span class="material-icons eye-icon">
+                                                visibility
+                                            </span>
+                                            <p class="mdc-theme--primary">Delivery 280723.pdf</p>
+                                        </div>
+                                        <div class="file-wrapper">
+                                            <span class="material-icons trash-icon">
+                                                delete_forever
+                                            </span>
+                                            <span class="material-icons eye-icon">
+                                                visibility
+                                            </span>
+                                            <p class="mdc-theme--primary">Purchase order 280723.doc</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-box comments">
+                                        <span class="title mdc-theme--surface">Comments</span>
+                                        <textarea></textarea>
+                                    </div>
+                                    <div class="add-reading-buttons edit-reading">
+                                        <button class="mdc-button mdc-button--raised">
+                                            <span class="mdc-button__label">Cancel</span>
+                                        </button>
+                                        <button class="mdc-button mdc-button--raised">
+                                            <span class="mdc-button__label">Delete</span>
+                                        </button>
+                                        <button class="mdc-button mdc-button--raised">
+                                            <span class="mdc-button__label">Update</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdc-dialog__scrim"></div>
+                    </div>
+                  
+                    <div class="mdc-dialog   mdc-dialog-add-delivery">
+                        <div class="mdc-dialog__container">
+                            <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true"
+                                aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+                                <h2 class="mdc-dialog__title font-montserrat" id="my-dialog-title">Add Delivery</h2>
+                                <div class="dialog-close mdc-button mdc-dialog__button" data-mdc-dialog-action="cancel">
+                                    <span class="material-icons ">
+                                        close
+                                    </span>
+                                </div>
+                                <span class="dialog-info font-reg">Add a delivery by choosing the tank number from the
+                                    drop down below and completing the required fields.</span>
+                                <div class="mdc-dialog__content" id="my-dialog-content">
+                                    <div class="mdc-add-delivery-fields">
+                                    </div>
+                                    <div class="text-box associated">
+                                        <span class="title mdc-theme--surface">Associated Documents</span>
+                                        <div class="file-wrapper">
+                                            <span class="material-icons trash-icon">
+                                                delete_forever
+                                            </span>
+                                            <span class="material-icons eye-icon">
+                                                visibility
+                                            </span>
+                                            <p class="mdc-theme--primary">Delivery 280723.pdf</p>
+                                        </div>
+                                        <div class="file-wrapper">
+                                            <span class="material-icons trash-icon">
+                                                delete_forever
+                                            </span>
+                                            <span class="material-icons eye-icon">
+                                                visibility
+                                            </span>
+                                            <p class="mdc-theme--primary">Purchase order 280723.doc</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-box comments">
+                                        <span class="title mdc-theme--surface">Comments</span>
+                                        <textarea></textarea>
+                                    </div>
+                                    <div class="add-reading-buttons">
+                                        <button class="mdc-button mdc-button--raised">
+                                            <span class="mdc-button__label">Cancel</span>
+                                        </button>
+                                        <button class="mdc-button mdc-button--raised">
+                                            <span class="mdc-button__label">Save</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdc-dialog__scrim"></div>
+                    </div>
+
 
                     <!-- footer -->
+
                     <div class="footer">
                         <span>© MCS Systems Lorum Epsum 2023</span>
                         <a class="mdc-button">
@@ -639,8 +1388,15 @@
             </div>
         </div>
     </div>
-    <script src="./main.js"></script>
+    </div>
+    <script src="./main.js" type="module"></script>
+    <script src="scripts/tab.js" type="module"></script>
+    <script src="./main-tabs/site-terminals.js" type="module"></script>
+    <script src="/main-tabs/main-dialog.js" type="module"></script>
+    <script src="./constants.js" type="module"></script>
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="/dialog/dialog.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 
 </html>

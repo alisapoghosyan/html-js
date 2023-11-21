@@ -1,86 +1,20 @@
-const sidebarMenu = document.getElementById("menu-sidebar");
-const menuIcons = document.querySelectorAll(".menu-icon");
-const containers = document.querySelectorAll(".container");
-const tabs = document.querySelectorAll('[role="tab"]');
-const mainWrapper = document.getElementById("main-wrapper");
+import { createTabs } from "./scripts/tab.js";
+import {
+  reconciliationRows,
+  reconciliationsTableHeader,
+  tableHeader,
+  tableRows,
+} from "../constants.js";
+import { createTable } from "./scripts/table.js";
+import { headerAppear } from "./scripts/headerAppear.js";
+
 const deliveryTable = document.getElementById("deliveries-table");
 const regardingsTable = document.getElementById("regardings-table");
-let tabFocus = 0;
+const reconciliationsTable = document.getElementById("reconciliations-table");
+const sidebarMenu = document.getElementById("menu-sidebar");
+const menuIcons = document.querySelectorAll(".menu-icon");
 
-const tableHeader = [
-  {
-    key: "icon",
-    value: "",
-  },
-  {
-    key: "date",
-    value: "Date/ Time",
-  },
-  {
-    key: "tankNo",
-    value: "Tank No.",
-  },
-  {
-    key: "product",
-    value: "Product",
-  },
-  {
-    key: "orderNo",
-    value: "Purchase <br> Order No.",
-  },
-  {
-    key: "registration",
-    value: "Registration <br> Origin",
-  },
-  {
-    key: "volume",
-    value: "Volume",
-  },
-  {
-    key: "comments",
-    value: "Comments",
-  },
-  {
-    key: "edit",
-    value: "",
-  },
-];
-
-const tableRows = [
-  {
-    icon: "arrow",
-    date: "19 Mar 2023 14:24",
-    tankNo: "01",
-    product: "Diesel",
-    orderNo: "6456546",
-    registration: "Webpage",
-    volume: "58641",
-    comments: "Text",
-    edit: "edit",
-  },
-  {
-    icon: "arrow",
-    date: "19 Mar 2023 14:24",
-    tankNo: "01",
-    product: "Diesel",
-    orderNo: "6456546",
-    registration: "Webpage",
-    volume: "58641",
-    comments: "Text",
-    edit: "edit",
-  },
-  {
-    icon: "arrow",
-    date: "19 Mar 2023 14:24",
-    tankNo: "01",
-    product: "Diesel",
-    orderNo: "6456546",
-    registration: "Webpage",
-    volume: "58641",
-    comments: "Text",
-    edit: "edit",
-  },
-];
+const mainWrapper = document.getElementById("main-wrapper");
 
 menuIcons.forEach((button) => {
   button.addEventListener("mouseenter", () => {
@@ -92,86 +26,12 @@ menuIcons.forEach((button) => {
     mainWrapper.classList.remove("open-menu");
   });
 });
-
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    removeActiveTabClass();
-    tabFocus = tab.tabIndex;
-    tab.classList.add("tab-active")
-    containers.forEach((item, index) => {
-      if (item.classList.contains("block")) {
-        item.classList.remove("block");
-      }
-
-      let actions = document.getElementsByClassName("header-actions");
-      tabFocus ? actions[0].classList.remove("hide") : actions[0].classList.add("hide");
-
-      tabFocus == index && item.classList.add("block");
-      tabFocus == 2 && createTable(deliveryTable, true);
-      tabFocus == 3 && createTable(regardingsTable);
-    });
-  });
-});
-
-function removeActiveTabClass() {
-  tabs.forEach(tab => tab.classList.remove("tab-active"));
-}
-
-function createTable(table, expandable = false) {
-  const rows = document.querySelectorAll('tr');
-  rows.forEach(row => row.remove())
-  // create table header
-  const headerRow = document.createElement("tr");
-  for (let i = 0; i < tableHeader.length; i++) {
-    th = document.createElement("th");
-    th.innerHTML = tableHeader[i].value;
-    if (i == 7) {
-      th.setAttribute("width", "25%");
-    }
-    headerRow.appendChild(th);
-  }
-
-  table.appendChild(headerRow);
-
-  // Create table rows
-  for (let i = 0; i < tableRows.length; i++) {
-    let row = document.createElement("tr");
-    expandable && row.addEventListener("click", () => {
-      onRowClick(row);
-    });
-
-    for (let j = 0; j < tableHeader.length; j++) {
-      let cell = document.createElement("td");
-      if (j == 0) {
-        if(expandable) {
-          const span = document.createElement("span");
-          span.innerText = "chevron_right";
-          span.setAttribute(
-            "class",
-            "material-icons row-icon arrow mdc-theme--primary"
-          );
-          cell.appendChild(span);
-        }
-      } else if (j == tableHeader.length - 1) {
-        const span = document.createElement("span");
-        span.innerText = "edit";
-        span.setAttribute("class", "material-icons row-icon");
-        cell.appendChild(span);
-      } else {
-        cell.innerText = tableRows[i][tableHeader[j].key];
-      }
-      row.appendChild(cell);
-    }
-    table.appendChild(row);
-  }
-}
-
 function onRowClick(row) {
   let rows = document.querySelectorAll(".expanded");
-  rows.forEach(item => item.classList.remove("expanded"));
+  rows.forEach((item) => item.classList.remove("expanded"));
 
   const expandedRow = document.getElementById("expanded-row");
-  if(expandedRow) {
+  if (expandedRow) {
     expandedRow.remove();
   }
 
@@ -180,36 +40,163 @@ function onRowClick(row) {
     "So a big tank arrived but it turned out it was empty so we didn’t have any diesel delivered.";
   const tr = document.createElement("tr");
   const td = document.createElement("td");
-  tr.setAttribute("id", "expanded-row")
+  tr.setAttribute("id", "expanded-row");
   td.setAttribute("colspan", 9);
 
   td.innerHTML = `<div class="nested-row">
-                    <div class="text-box">
-                        <span class="title mdc-theme--surface">Comments</span>
-                        <textarea>${text}</textarea>
-                    </div>
-                    <div class="text-box">
-                        <span class="title mdc-theme--surface">Associated Documents</span>
-                        <div class="file-wrapper">
-                          <span class="material-icons trash-icon">
-                            delete_forever
-                          </span>
-                          <span class="material-icons eye-icon">
-                            visibility
-                          </span>
-                          <p class="mdc-theme--primary">Delivery 280723.pdf</p>
+                        <div class="text-box">
+                            <span class="title mdc-theme--surface">Comments</span>
+                            <textarea>${text}</textarea>
                         </div>
-                        <div class="file-wrapper">
-                          <span class="material-icons trash-icon">
-                            delete_forever
-                          </span>
-                          <span class="material-icons eye-icon">
-                            visibility
-                          </span>
-                          <p class="mdc-theme--primary">Purchase order 280723.doc</p>
-                        </div>
-                </div>`;
+                        <div class="text-box">
+                            <span class="title mdc-theme--surface">Associated Documents</span>
+                            <div class="file-wrapper">
+                              <span class="material-icons trash-icon">
+                                delete_forever
+                              </span>
+                              <span class="material-icons eye-icon">
+                                visibility
+                              </span>
+                              <p class="mdc-theme--primary">Delivery 280723.pdf</p>
+                            </div>
+                            <div class="file-wrapper">
+                              <span class="material-icons trash-icon">
+                                delete_forever
+                              </span>
+                              <span class="material-icons eye-icon">
+                                visibility
+                              </span>
+                              <p class="mdc-theme--primary">Purchase order 280723.doc</p>
+                            </div>
+                    </div>`;
 
   tr.appendChild(td);
   row.after(tr);
 }
+
+
+const tabFuncianlaity = {
+  0: () => {
+    headerAppear(false);
+  },
+  2: () => {
+    headerAppear(true);
+    createTable({
+      head: tableHeader,
+      rowTable: tableRows,
+      table: deliveryTable,
+      expandable: true,
+      onRowClick: onRowClick,
+      classDialog:'.edit-delivery-dialog'
+    });
+  },
+  3: () => {
+    headerAppear(true);
+    createTable({
+      head: tableHeader,
+      rowTable: tableRows,
+      table: regardingsTable,
+      onRowClick: onRowClick,
+    });
+  },
+  6: () => {
+    headerAppear(true);
+    createTable({
+      head: reconciliationsTableHeader,
+      rowTable: reconciliationRows,
+      table: reconciliationsTable,
+      balance: true,
+      onRowClick: onRowClick,
+    });
+  },
+};
+
+[1,4,5].forEach((item) => {
+  tabFuncianlaity[`${item}`] = () => {
+    headerAppear(true);
+  };
+});
+
+createTabs(tabFuncianlaity);
+
+
+// TANKS
+
+let showMoreBtns = document.querySelectorAll(".show-more-btn");
+let showLessBtns = document.querySelectorAll(".show-less");
+let accordionIcons = document.querySelectorAll('.accordion-icon') 
+
+for(let i = 0; i < showMoreBtns.length; i++) {
+  showMoreBtns[i].addEventListener("click", () => {
+    accordionIcons[i].style.transform = "rotate(90deg)";
+    let content = document.querySelectorAll(".more-content")[i]
+    content.style.display = "flex"
+    showMoreBtns[i].style.display = 'none'
+    if (showLessBtns[i]) {
+      showLessBtns[i].style.display = "block"
+    }
+  });
+
+  showLessBtns[i].addEventListener('click', () => {
+    accordionIcons[i].style.transform = "rotate(0deg)";
+    let content = document.querySelectorAll(".more-content")[i]
+    content.style.display = "none"
+    showMoreBtns[i].style.display = 'block'
+    showLessBtns[i].style.display = 'none'
+  })
+
+}
+
+var chrt = document.getElementById("chartId").getContext("2d");
+var chrt2 = document.getElementById("chartId2").getContext("2d");
+var chrt3 = document.getElementById("chartId3").getContext("2d");
+var chrt4 = document.getElementById("chartId4").getContext("2d");
+let data = {
+  labels: ["date", "date", "date", "date", "date", "date", "date", "date"],
+  datasets: [{
+      label: "online tutorial subjects",
+      data: [1800, 2000, 1700, 1500, 1600, 1400, 1250 , 1500, 1200, 1000, 800, 1100, 700, 640, 800, 450, 300, 350, 100, 150, 200, 50, 0],
+      backgroundColor: ['yellow', 'aqua', 'pink', 'lightgreen', 'lightblue', 'gold'],
+      borderColor: '#2A94CB',
+      borderWidth: 2,
+      pointRadius: 0,
+  }],
+}
+let options = {
+  responsive: true,
+  plugins: {
+    legend: {
+        display: false,
+    }
+  },
+  scales: {
+    x: {
+      grid: {
+        display: false
+      }
+    },
+  },            
+}
+var chartId = new Chart(chrt, {
+  type: 'line',
+  data: data,
+  options: options
+});
+
+var chartId2 = new Chart(chrt2, {
+  type: 'line',
+  data: data,
+  options: options
+});
+
+var chartId3 = new Chart(chrt3, {
+  type: 'line',
+  data: data,
+  options: options
+});
+
+var chartId4 = new Chart(chrt4, {
+  type: 'line',
+  data: data,
+  options: options
+});

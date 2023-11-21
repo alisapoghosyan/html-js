@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/groups/groupes.css">
+    <link rel="stylesheet" href="/dialog/dialog.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main mdc-theme--background">
+        <!-- left menu -->
+        <div class="left-menu mdc-theme--primary-bg">
+            <button class="mdc-button menu">
+                <span class="material-icons mdc-button__icon">
+                    menu
+                </span>
+            </button>
+            <div class="menu-icon">
+                <a class="mdc-button" onmouseenter="showMenu()" href="/">
+                    <span class="material-icons mdc-button__icon">
+                        dashboard
+                    </span>
+                    <span class="mdc-button__label">Home</span>
+                </a>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        show_chart
+                    </span>
+                    <span class="mdc-button__label">Reports</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        receipt_long
+                    </span>
+                    <span class="mdc-button__label">Transactions</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        account_box
+                    </span>
+                    <span class="mdc-button__label">Customers</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <a class="mdc-button" href="/sites">
+                    <span class="material-icons mdc-button__icon">
+                        location_on
+                    </span>
+                    <span class="mdc-button__label">Sites</span>
+                </a>
+            </div>
+            <div class="menu-icon">
+                <a class="mdc-button" href="/cards">
+                    <span class="material-icons mdc-button__icon">
+                        style
+                    </span>
+                    <span class="mdc-button__label">Cards</span>
+                </a>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        local_shipping
+                    </span>
+                    <span class="mdc-button__label">Vehicles</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        airline_seat_recline_normal
+                    </span>
+                    <span class="mdc-button__label">Drivers</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <a class="mdc-button" href="/groups">
+                    <span class="material-icons mdc-button__icon">
+                        folder
+                    </span>
+                    <span class="mdc-button__label">Groups</span>
+                </a>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        apps
+                    </span>
+                    <span class="mdc-button__label">More...</span>
+                </button>
+            </div>
+            <div class="divider"></div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        history
+                    </span>
+                    <span class="mdc-button__label">Recent</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        flash_on
+                    </span>
+                    <span class="mdc-button__label">Most used</span>
+                </button>
+            </div>
+            <div class="menu-icon">
+                <button class="mdc-button">
+                    <span class="material-icons mdc-button__icon">
+                        star_border
+                    </span>
+                    <span class="mdc-button__label">Starred</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- main page -->
+        <div class="main-page">
+
+            <!-- header -->
+            <div class="header mdc-theme--surface">
+                <img src="../assets/mcs-core-logo.png" alt="mcs core logo">
+                <div class="header-info">
+                    <div class="header-search">
+                        <input type="text" class="search-input" placeholder="Search">
+                        <div class="select-box">
+                            <span class="name">Everything</span>
+                            <span class="material-icons">
+                                arrow_drop_down
+                            </span>
+                        </div>
+                        <button class="mdc-fab" aria-label="Search">
+                            <div class="mdc-fab__ripple"></div>
+                            <span class="mdc-fab__icon material-icons">search</span>
+                        </button>
+                    </div>
+                    <div class="header-account">
+                        <div class="header-account-icon">
+                            <span class="material-icons account-icon">
+                                apartment
+                            </span>
+                            <span class="name">PetroCore Australia</span>
+                            <span class="material-icons">
+                                arrow_drop_down
+                            </span>
+                        </div>
+                        <div class="header-account-icon">
+                            <span class="material-icons account-icon">
+                                account_circle
+                            </span>
+                            <span class="name">Arron Young</span>
+                            <span class="material-icons">
+                                arrow_drop_down
+                            </span>
+                        </div>
+                        <div class="notification-icon-wrapper">
+                            <span class="material-icons">
+                                notifications
+                            </span>
+                            <span class="count">9</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-page-container">
+
+                <!-- menu sidebar -->
+                <div class="menu-sidebar mdc-theme--primary mdc-theme--surface" id="menu-sidebar">
+                    <div class="sub-menu-container">
+                        <span class="title">Sites</span>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                location_on
+                            </span>
+                            <span class="mdc-button__label">All Sites</span>
+                        </button>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                <span class="material-icons">
+                                    bookmark
+                                </span>
+                            </span>
+                            <span class="mdc-button__label">Add Dip Read</span>
+                        </button>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                <span class="material-icons">
+                                    bookmark
+                                </span>
+                            </span>
+                            <span class="mdc-button__label">Deliveries</span>
+                        </button>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                <span class="material-icons">
+                                    bookmark
+                                </span>
+                            </span>
+                            <span class="mdc-button__label">Dip Readings</span>
+                        </button>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                <span class="material-icons">
+                                    bookmark
+                                </span>
+                            </span>
+                            <span class="mdc-button__label">Transactions</span>
+                        </button>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                <span class="material-icons">
+                                    bookmark
+                                </span>
+                            </span>
+                            <span class="mdc-button__label">Terminals</span>
+                        </button>
+                        <button class="mdc-button">
+                            <span class="material-icons mdc-button__icon">
+                                <span class="material-icons">
+                                    bookmark
+                                </span>
+                            </span>
+                            <span class="mdc-button__label">Reconcilliations</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="main-page-wrapper" id="main-wrapper">
+
+                    <div class="main-content card-conatiner">
+                        <div class="main-content-header">
+                            <div class="main-header-groups">
+                                <a href="/groups">Groups</a>
+                                <span class="material-icons">
+                                    chevron_right
+                                </span>
+                                <p class="font-montserrat card-header-number">
+                                    Batch Basket</p>
+                            </div>
+                        </div>
+                        <div class="content mdc-theme--surface ">
+                            <div class="alert">
+                                <span class="material-icons">
+                                    error
+                                </span>
+                                <span>
+                                    Current items are of Card type only and ready for processing. Remember that batch
+                                    edits
+                                    cannot be undone.
+                                </span>
+                            </div>
+                            <ul class="ul-groups">
+                                <li>Your Batch Basket is a special group that allows you to bundle items together that
+                                    you want to batch or bulk edit.
+                                </li>
+                                <li>You can only batch/bulk process items of the same type, so items that are only
+                                    Cards, or only Users, or only Vehicles, as examples.</li>
+                                <li>You have the option to remove data (groups and limits) assigned to your items before
+                                    assigning new data and setting field values.</li>
+                            </ul>
+                            <div class="batchSteps"></div>
+
+                        </div>
+
+                    </div>
+                    <div class="mdc-dialog">
+                        <div class="mdc-dialog__container dialog-groups-eye-container">
+                            <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true"
+                                aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+                                <h2 class="mdc-dialog__title font-montserrat" id="my-dialog-title">Preview Changes</h2>
+                                <div class="dialog-close mdc-button mdc-dialog__button" data-mdc-dialog-action="cancel">
+                                    <span class="material-icons ">
+                                        close
+                                    </span>
+                                </div>
+
+                                <div class="mdc-dialog__content" id="my-dialog-content">
+                                    <div class=" dialog-groups-eye">
+                                        <div class="before">
+                                            <span class="info">Fields before change</span>
+                                            <div class="text-box">
+                                                <span class="title mdc-theme--surface">Groups</span>
+                                                <input value="Shell Card" />
+                                            </div>
+                                            <div class="text-box">
+                                                <span class="title mdc-theme--surface">Prompt Odometer</span>
+                                                <input value="True" />
+                                            </div>
+                                        </div>
+                                        <div class="after">
+                                            <span class="info">Fields after change</span>
+                                            <div class="text-box">
+                                                <span class="title mdc-theme--surface">Groups</span>
+                                                <input value="" />
+                                            </div>
+                                            <div class="text-box">
+                                                <span class="title mdc-theme--surface">Prompt Odometer</span>
+                                                <input value="False" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="add-reading-buttons">
+                                        <button class="mdc-button mdc-button--raised">
+                                            <span class="mdc-button__label">Previous</span>
+                                        </button>
+                                        <button class="mdc-button mdc-button--raised">
+                                            <span class="mdc-button__label">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdc-dialog__scrim"></div>
+                    </div>
+                    <!-- footer -->
+
+                    <div class="footer">
+                        <span>© MCS Systems Lorum Epsum 2023</span>
+                        <a class="mdc-button">
+                            Privacy Policy
+                        </a>
+                        <a class="mdc-button">
+                            Data Protection
+                        </a>
+                        <a class="mdc-button">
+                            Feedback
+                        </a>
+                        <a class="mdc-button">
+                            Support
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="../constants.js" type="module"></script>
+    <script src="/groups/groups.js" type="module"></script>
+    <script src="/groups/stepcontinue.js" type="module"></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+</body>
+
+</html>
